@@ -22,12 +22,14 @@ const CarruselAlternativo = () => {
           dots: true,
           draggable: false, // Intenta deshabilitar el arrastre en móvil
           swipe: false,     // Intenta deshabilitar el deslizamiento táctil en móvil
+          dots: true
         }
       }
     ]
   };
   return (
     <div className="w-full py-10 bg-gray-100" style={{ overscrollBehavior: 'contain', touchAction: 'pan-y' }}>
+    <div className="w-full py-10 bg-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">
           Descubre más de nuestra colección
@@ -48,6 +50,7 @@ const CarruselAlternativo = () => {
           {/* Añade más slides aquí */}
         </Slider>
       </div>
+    </div>
     </div>
   );
 };

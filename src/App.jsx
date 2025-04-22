@@ -7,7 +7,6 @@ import Footer from './components/Footer'; // Ruta corregida: directo desde compo
 import Hero from './components/Hero/Hero';
 import Carrusel from './components/Carrusel';
 
-
 const App = () => {
   return (
     <div id="root">
@@ -15,10 +14,8 @@ const App = () => {
       <Header />
       <Hero />
       <Galeria />
-     <Carrusel/>
-      
-    
-      
+      <Carrusel/>
+
       {/* Contenido Principal */}
       <main className="container">
         <section id="nosotros">
@@ -43,11 +40,8 @@ const App = () => {
         </section>
       </main>
 
-
-
-      
-     {/* Pie de Página */}
-     <Footer /> {/* ¡Ahora renderizas el componente importado! */}
+      {/* Pie de Página */}
+      <Footer /> {/* ¡Ahora renderizas el componente importado! */}
     </div>
   );
 };
