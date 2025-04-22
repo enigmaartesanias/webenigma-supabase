@@ -1,0 +1,273 @@
+/* Estilos Globales */
+#root {
+    max-width: auto;
+    margin: 0 auto;
+   
+    text-align: center;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Estilos del Logo */
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  /* Animaciones */
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  /* Estilos Generales */
+  .card {
+    padding: 2em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .read-the-docs {
+    color: #888;
+    font-size: 0.9em;
+  }
+  
+  /* Estilos del Header */
+  header {
+    background-color: #ffffff; /* Fondo blanco */
+    color: black; /* Texto negro */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  header img {
+    height: 40px;
+  }
+  
+  /* Botón Menú Móvil */
+  header button {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: black; /* Icono negro */
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    header button {
+      display: block;
+      margin-left: auto; /* Alinea el botón a la derecha */
+    }
+  
+    /* Centrar el menú en modo móvil */
+    nav ul {
+      text-align: center; /* Centra el texto de los elementos del menú */
+    }
+  
+    nav li {
+      text-align: center; /* Centra el texto dentro de cada <li> */
+    }
+  
+    nav li button {
+      text-align: center; /* Centra el texto dentro del botón */
+    }
+  }
+  
+  /* Menú Principal */
+  nav {
+    display: flex;
+    
+    gap: 1rem;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: column; /* Hacer el menú vertical */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centrar el texto de los elementos del menú */
+  }
+  
+  nav a,
+  nav button {
+    text-decoration: none;
+    color: black; /* Texto negro */
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    font-size: 0.9rem; /* Tamaño de letra reducido */
+    display: block; /* Hacer los elementos del menú bloque para centrarlos */
+  }
+  
+  nav a:hover,
+  nav button:hover {
+    color: #555; /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Flechas para Indicar Despliegue */
+  nav li.has-submenu > button::after {
+    content: ' ▼'; /* Flecha hacia abajo */
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  nav li.active > button::after {
+    transform: rotate(180deg); /* Flecha hacia arriba cuando está activo */
+  }
+  
+  /* Responsive Menu */
+ /* Estilos Responsive para el Menú */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff; /* Fondo blanco */
+    position: absolute;
+    top: 60px;
+    right: 0; /* Alinea el menú a la derecha */
+    width: 100%; /* Ocupa todo el ancho del dispositivo */
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50; /* Asegura que esté sobre otros elementos */
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav li {
+    position: relative;
+  }
+
+  nav li ul {
+    display: none;
+    position: static;
+    background-color: #f9f9f9; /* Fondo claro para el submenú */
+    padding: 0.5rem 0;
+  }
+
+  nav li.active > ul {
+    display: block;
+  }
+
+  /* Agregar línea horizontal entre los elementos del menú */
+  nav a,
+  nav button {
+    display: block; /* Hace que los elementos ocupen todo el ancho */
+    padding: 1rem; /* Espaciado interno uniforme */
+    text-align: center; /* Centra el texto */
+    color: black; /* Texto negro */
+    font-size: 1rem; /* Tamaño de letra adecuado */
+    border-bottom: 2px solid #ccc; /* Línea horizontal de color gris claro */
+  }
+
+  
+}
+
+/* Submenús */
+nav li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9; /* Fondo claro para el submenú */
+  list-style: none;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a:last-child,
+  nav button:last-child {
+    border-bottom: none; /* Quita la línea del último elemento */
+  }
+
+
+
+nav li ul li {
+  width: 100%;
+}
+
+nav li ul a {
+  padding: 0.5rem 1rem;
+  display: block;
+  color: black; /* Texto negro */
+  font-size: 0.9rem; /* Tamaño de letra reducido */
+}
+
+nav li ul a:hover {
+  background-color: #e0e0e0; /* Cambio de fondo al pasar el ratón */
+}
+
+/* Responsive Submenús */
+@media (max-width: 768px) {
+  nav li ul {
+    position: static;
+    background-color: #f9f9f9; /* Fondo claro para el submenú */
+    padding: 0.5rem 0;
+    
+  }
+
+  nav li ul li {
+    width: 100%;
+  }
+
+  nav li ul a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: black; /* Texto negro */
+    font-size: 0.9rem; /* Tamaño de letra reducido */
+  }
+
+  nav li ul a:hover {
+    background-color: #e0e0e0; /* Cambio de fondo al pasar el ratón */
+  }
+}
+  
+  /* Pie de Página */
+  .footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
