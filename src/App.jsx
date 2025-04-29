@@ -1,12 +1,16 @@
 import React from 'react';
 import './styles.css'; // Importa los estilos globales
 import Header from './components/Header'; // Importa el componente Header
+import Hero from './components/Hero'; // Importa el componente Hero
+import Footer from './components/Footer'; // ¡Importaste el componente Footer!
+
 
 const App = () => {
   return (
     <div id="root">
       {/* Encabezado */}
       <Header />
+      <Hero /> {/* Renderiza el componente Hero aquí */}
 
       {/* Contenido Principal */}
       <main className="container">
@@ -33,9 +37,7 @@ const App = () => {
       </main>
 
       {/* Pie de Página */}
-      <footer className="footer">
-        <p>&copy; 2025 EnigmaWeb. Todos los derechos reservados.</p>
-      </footer>
+      <Footer /> {/* ¡Ahora renderizas el componente importado! */}
     </div>
   );
 };
