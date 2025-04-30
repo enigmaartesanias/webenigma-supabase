@@ -1,0 +1,58 @@
+/* Estilos para Galeria */
+.galeria-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px; /* Ampliar el tamaño del contenedor */
+    margin: 5px auto 0 auto; /* Aumentar margen superior para mayor separación */
+    background-color: white; /* Fondo blanco */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .galeria-titulo {
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.8); /* Color cobre con transparencia */
+  }
+  
+  .imagenes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 imágenes en una fila */
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .imagen-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 250px; /* Ajustar tamaño de imágenes */
+    margin: 0 auto;
+  }
+  
+  .imagen {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .imagenes-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila en móviles */
+    }
+  }

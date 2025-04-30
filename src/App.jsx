@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.css'; // Importa los estilos globales
 import Header from './components/Header'; // Importa el componente Header
 import Hero from './components/Hero'; // Importa el componente Hero
+import Galeria from './components/Galeria'; // Importa el nuevo componente 
+import Carrusel from './components/Carrusel';
 import Footer from './components/Footer'; // ¡Importaste el componente Footer!
 
 
@@ -11,7 +13,8 @@ const App = () => {
       {/* Encabezado */}
       <Header />
       <Hero /> {/* Renderiza el componente Hero aquí */}
-
+      <Galeria />
+      <Carrusel />
       {/* Contenido Principal */}
       <main className="container">
         <section id="nosotros">
@@ -35,6 +38,8 @@ const App = () => {
           </p>
         </section>
       </main>
+
+
 
       {/* Pie de Página */}
       <Footer /> {/* ¡Ahora renderizas el componente importado! */}
