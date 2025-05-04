@@ -1,8 +1,11 @@
+// src/App.jsx
 import React from 'react';
-import './styles.css'; // Importa los estilos globales
-import Header from './components/Header'; // Importa el componente Header
-import Hero from './components/Hero'; // Importa el componente Hero
-import Footer from './components/Footer'; // ¡Importaste el componente Footer!
+import './styles/App.css'; // Ruta correcta
+import Header from './components/Header/Header';
+import Galeria from './components/Galeria/Galeria';
+import Footer from './components/Footer'; // Ruta corregida: directo desde components
+import Hero from './components/Hero/Hero';
+import Carrusel from './components/Carrusel';
 
 
 const App = () => {
@@ -10,8 +13,12 @@ const App = () => {
     <div id="root">
       {/* Encabezado */}
       <Header />
-      <Hero /> {/* Renderiza el componente Hero aquí */}
-
+      <Hero />
+      <Galeria />
+     <Carrusel/>
+      
+    
+      
       {/* Contenido Principal */}
       <main className="container">
         <section id="nosotros">
@@ -36,8 +43,11 @@ const App = () => {
         </section>
       </main>
 
-      {/* Pie de Página */}
-      <Footer /> {/* ¡Ahora renderizas el componente importado! */}
+
+
+      
+     {/* Pie de Página */}
+     <Footer /> {/* ¡Ahora renderizas el componente importado! */}
     </div>
   );
 };

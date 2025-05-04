@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
-import principal from "../assets/images/principal.jpg";
-import principal2 from "../assets/images/principal2.jpg";
-import principal3 from "../assets/images/principal3.jpg";
-
+import React, { useState, useEffect } from "react";
+import principal from "../../assets/images/principal.jpg"; // Corrección de la ruta
+import principal2 from "../../assets/images/principal2.jpg";
+import principal3 from "../../assets/images/principal3.jpg";
 const images = [principal, principal2, principal3];
 
 const Hero = () => {
