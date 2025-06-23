@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-padding-top: var(--header-height, 64px);
+    overscroll-behavior-x: none; /* Evita rebote lateral */
+    overflow-x: hidden;          /* Oculta scroll horizontal */
+  }
+  body {
+    overscroll-behavior-x: none; /* Evita rebote lateral */
+    overflow-x: hidden;          /* Oculta scroll horizontal */
+  }
+}

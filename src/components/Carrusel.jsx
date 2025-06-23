@@ -19,38 +19,45 @@ const CarruselAlternativo = () => {
           slidesToShow: 1, // Mostrar 1 en pantallas menores a 768px
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          
           draggable: false, // Intenta deshabilitar el arrastre en móvil
           swipe: false,     // Intenta deshabilitar el deslizamiento táctil en móvil
-          dots: true
+          
         }
       }
     ]
   };
   return (
-    <div className="w-full py-10 bg-gray-100" style={{ overscrollBehavior: 'contain', touchAction: 'pan-y' }}>
-    <div className="w-full py-10 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-8">
-          Descubre más de nuestra colección
+    <div className="w-full py-7 bg-gray-200" style={{ overscrollBehavior: 'contain', touchAction: 'pan-y' }}>
+ 
+      <div className="container mx-auto px-10 max-w-7xl"> {/* Por ejemplo, max-w-4xl */}
+        <h2 className="text-2xl font-normal md:text-1xl lg:text-3xl text-gray-800 text-center mb-4">
+          Creaciones del Momento
         </h2>
         <Slider {...settings}>
           <div>
-            <img src="/images/img1.jpg" alt="Producto 1" className="w-full h-48 object-cover rounded-lg" />
-            <p className="mt-2 text-gray-700 text-center">Descripción del producto 1</p>
+            <img src="/images/img1.jpg" alt="Producto 1" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
+            <p className="mt-2 text-gray-700 text-center">Pulsera de alpaca</p>
           </div>
           <div>
-            <img src="/images/img2.jpg" alt="Producto 2" className="w-full h-48 object-cover rounded-lg" />
-            <p className="mt-2 text-gray-700 text-center">Descripción del producto 2</p>
+            <img src="/images/img2.jpg" alt="Producto 2" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
+            <p className="mt-2 text-gray-700 text-center">Pulsera labradorita</p>
           </div>
           <div>
-            <img src="/images/img3.jpg" alt="Producto 3" className="w-full h-48 object-cover rounded-lg" />
-            <p className="mt-2 text-gray-700 text-center">Descripción del producto 3</p>
+            <img src="/images/img3.jpg" alt="Producto 3" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
+            <p className="mt-2 text-gray-700 text-center">Anillo coral</p>
           </div>
+          <div>
+            <img src="/images/img4.jpg" alt="Producto 3" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
+            <p className="mt-2 text-gray-700 text-center">Dije en alpaca</p>
+          </div>
+
+
+
           {/* Añade más slides aquí */}
         </Slider>
       </div>
-    </div>
+   
     </div>
   );
 };

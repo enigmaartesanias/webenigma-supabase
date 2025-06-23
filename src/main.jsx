@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './styles/styles.css'; // Tus otros estilos globales
 import './styles/index.css'; // Tailwind
-import './styles/app.css';
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

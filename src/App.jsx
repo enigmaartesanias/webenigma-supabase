@@ -1,48 +1,43 @@
-// src/App.jsx
-import React from 'react';
-import './styles/App.css'; // Ruta correcta
+import './styles/styles.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
-import Galeria from './components/Galeria/Galeria';
-import Footer from './components/Footer'; // Ruta corregida: directo desde components
-import Hero from './components/Hero/Hero';
-import Carrusel from './components/Carrusel';
+import Footer from './components/Footer';
+import PlataAnillos from './pages/PlataAnillos/PlataAnillos';
+import PlataPulseras from './pages/PlataPulseras/PlataPulseras';
+import PlataCollares from './pages/PlataCollares/PlataCollares';
+import PlataAretes from './pages/PlataAretes/PlataAretes';
+import CobreAnillos from './pages/CobreAnillos/CobreAnillos';
+import AlpacaAnillos from './pages/AlpacaAnillos/AlpacaAnillos';
+import AlpacaPulseras from './pages/AlpacaPulseras/AlpacaPulseras';
+import AlpacaAretes from './pages/AlpacaAretes/AlpacaAretes';
+import AlpacaCollares from './pages/AlpacaCollares/AlpacaCollares';
+import CobreAretes from './pages/CobreAretes/CobreAretes';
+import CobrePulseras from './pages/CobrePulseras/CobrePulseras';
+import CobreCollares from './pages/CobreCollares/CobreCollares';
+
 
 const App = () => {
   return (
-    <div id="root">
-      {/* Encabezado */}
+    <Router>
       <Header />
-      <Hero />
-      <Galeria />
-      <Carrusel/>
-
-      {/* Contenido Principal */}
-      <main className="container">
-        <section id="nosotros">
-          <h2>Nosotros</h2>
-          <p>
-            Somos una empresa dedicada a la creación de joyas artesanales. Nuestro compromiso es ofrecer productos de alta calidad y diseño único.
-          </p>
-        </section>
-
-        <section id="personalizados">
-          <h2>Personalizados</h2>
-          <p>
-            Ofrecemos servicios de personalización para crear piezas únicas según tus necesidades.
-          </p>
-        </section>
-
-        <section id="contacto">
-          <h2>Contacto</h2>
-          <p>
-            Puedes contactarnos a través de nuestro correo electrónico o redes sociales.
-          </p>
-        </section>
-      </main>
-
-      {/* Pie de Página */}
-      <Footer /> {/* ¡Ahora renderizas el componente importado! */}
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/plataanillos" element={<PlataAnillos />} />
+        <Route path="/platapulseras" element={<PlataPulseras />} />
+        <Route path="/platacollares" element={<PlataCollares />} />
+        <Route path="/plataaretes" element={<PlataAretes />} />
+        <Route path="/cobreanillos" element={<CobreAnillos />} />
+        <Route path="/cobrepulseras" element={<CobrePulseras />} />
+        <Route path="/cobrecollares" element={<CobreCollares />} />
+        <Route path="/alpacaanillos" element={<AlpacaAnillos />} />
+        <Route path="/alpacapulseras" element={<AlpacaPulseras />} />
+        <Route path="/alpacaaretes" element={<AlpacaAretes />} />
+        <Route path="/alpacacollares" element={<AlpacaCollares />} />
+        <Route path="/cobrearetes" element={<CobreAretes />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 };
 
