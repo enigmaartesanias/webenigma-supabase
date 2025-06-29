@@ -28,28 +28,28 @@ import anillo22 from '../../assets/images/plata-anillos/anillo22.jpg';
 
 
 const anillosData = [
-  { id: 1, src: anillo1, alt: 'Anillo con cuarzo rojo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: anillo2, alt: 'Anillo con amatista', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: anillo3, alt: 'Anillo con coral', title: 'Anillo con spondylus', description: 'A pedido' },
-  { id: 4, src: anillo4, alt: 'Anillo con piedra turquesa', title: 'Anillo con crisocola', description: 'A pedido' },
-  { id: 5, src: anillo5, alt: 'Anillo de diseño tribal', title: 'Anillo abalon marino', description: 'A pedido' },
-  { id: 6, src: anillo6, alt: 'Anillo con piedra verde', title: 'Anillo estilo serpiente', description: 'A pedido' },
-  { id: 7, src: anillo7, alt: 'Anillo con piedra verde', title: 'Anillo abalon', description: 'A pedido' },
-  { id: 8, src: anillo8, alt: 'Anillo con piedra verde', title: 'Anillo amatista drusa', description: 'A pedido' },
-  { id: 9, src: anillo9, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 10, src: anillo10, alt: 'Anillo con piedra verde', title: 'Anillo labradorita', description: 'A pedido' },
-  { id: 11, src: anillo11, alt: 'Anillo con piedra verde', title: 'Anillo labradorita', description: 'A pedido' },
-  { id: 12, src: anillo12, alt: 'Anillo con piedra verde', title: 'Anillo crisocola', description: 'A pedido' },
-  { id: 13, src: anillo13, alt: 'Anillo con piedra verde', title: 'Anillo trenzado', description: 'A pedido' },
-  { id: 14, src: anillo14, alt: 'Anillo con piedra verde', title: 'Anillo ópalo', description: 'A pedido' },
-  { id: 15, src: anillo15, alt: 'Anillo con piedra verde', title: 'Anillo martillado', description: 'A pedido' },
-  { id: 16, src: anillo16, alt: 'Anillo con piedra verde', title: 'Anillo amatista', description: 'A pedido' },
-  { id: 17, src: anillo17, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 18, src: anillo18, alt: 'Anillo con piedra verde', title: 'Anillo celtico', description: 'A pedido' },
-  { id: 19, src: anillo19, alt: 'Anillo con piedra verde', title: 'Anillo amazonita', description: 'A pedido' },
-  { id: 20, src: anillo20, alt: 'Anillo con piedra verde', title: 'Anillo turquesa', description: 'A pedido' },
-  { id: 21, src: anillo21, alt: 'Anillo con piedra verde', title: 'Anillo turquesa reconstituida', description: 'A pedido' },
-  { id: 22, src: anillo22, alt: 'Anillo con piedra verde', title: 'Anillo ojo de tigre', description: 'A pedido' },
+  { id: 1, src: anillo1, alt: 'Anillo', title: 'Anillo bonsai', description: 'A pedido' },
+  { id: 2, src: anillo2, alt: 'Anillo', title: 'Anillo amatista facetada', description: 'A pedido' },
+  { id: 3, src: anillo3, alt: 'Anillo', title: 'Anillo con spondylus', description: 'A pedido' },
+  { id: 4, src: anillo4, alt: 'Anillo', title: 'Anillo con crisocola', description: 'A pedido' },
+  { id: 5, src: anillo5, alt: 'Anillo', title: 'Anillo abalon marino', description: 'A pedido' },
+  { id: 6, src: anillo6, alt: 'Anillo', title: 'Anillo estilo serpiente', description: 'A pedido' },
+  { id: 7, src: anillo7, alt: 'Anillo', title: 'Anillo abalon', description: 'A pedido' },
+  { id: 8, src: anillo8, alt: 'Anillo', title: 'Anillo amatista drusa', description: 'A pedido' },
+  { id: 9, src: anillo9, alt: 'Anillo', title: 'Anillo onix', description: 'A pedido' },
+  { id: 10, src: anillo10, alt: 'Anillo', title: 'Anillo labradorita', description: 'A pedido' },
+  { id: 11, src: anillo11, alt: 'Anillo', title: 'Anillo labradorita', description: 'A pedido' },
+  { id: 12, src: anillo12, alt: 'Anillo', title: 'Anillo crisocola', description: 'A pedido' },
+  { id: 13, src: anillo13, alt: 'Anillo', title: 'Anillo trenzado', description: 'A pedido' },
+  { id: 14, src: anillo14, alt: 'Anillo', title: 'Anillo ópalo', description: 'A pedido' },
+  { id: 15, src: anillo15, alt: 'Anillo', title: 'Anillo martillado', description: 'A pedido' },
+  { id: 16, src: anillo16, alt: 'Anillo', title: 'Anillo amatista', description: 'A pedido' },
+  { id: 17, src: anillo17, alt: 'Anillo', title: 'Anillo onix', description: 'A pedido' },
+  { id: 18, src: anillo18, alt: 'Anillo', title: 'Anillo celtico', description: 'A pedido' },
+  { id: 19, src: anillo19, alt: 'Anillo', title: 'Anillo amazonita', description: 'A pedido' },
+  { id: 20, src: anillo20, alt: 'Anillo', title: 'Anillo turquesa', description: 'A pedido' },
+  { id: 21, src: anillo21, alt: 'Anillo', title: 'Anillo turquesa reconstituida', description: 'A pedido' },
+  { id: 22, src: anillo22, alt: 'Anillo', title: 'Anillo ojo de tigre', description: 'A pedido' },
 
 ];
 
@@ -77,11 +77,12 @@ const PlataAnillos = () => {
             Anillos de Plata – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Anillos únicos en plata, trabajados completamente a mano con técnicas de orfebrería artesanal.
-          Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal.
-          Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos.
-          El alambrismo aporta detalle y carácter, creando composiciones irrepetibles.
-          Joyas con alma, inspiradas en lo místico y lo ancestral.
+           Anillos únicos en plata 950, trabajados a mano con técnicas de joyería artesanal tipo orfebrería.
+            Cada diseño es exclusivo, fusionando el arte del alambrismo con acabados envejecidos que evocan lo ancestral.
+            Utilizamos piedras naturales, cuarzos, nácar y spondylus para realzar su carácter místico.
+            La plata se transforma en formas elegantes que transmiten fuerza y delicadeza.
+            Inspirados en lo simbólico y lo eterno, cada pieza tiene su propia historia.
+            Joyas que combinan tradición y creatividad, hechas con pasión y precisión.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {anillosData.map((anillo, idx) => (
@@ -98,7 +99,7 @@ const PlataAnillos = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <h3 className="text-md font-medium">{anillo.title}</h3>
-                  <p className="text-sm text-gray-200">{anillo.description}</p>
+                  <p className="hidden text-sm text-gray-200">{anillo.description}</p>
                 </div>
               </div>
             ))}

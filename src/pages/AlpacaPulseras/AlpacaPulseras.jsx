@@ -12,23 +12,23 @@ import pulsera8 from '../../assets/images/alpaca-pulseras/pulsera8.jpg';
 import pulsera9 from '../../assets/images/alpaca-pulseras/pulsera9.jpg';
 import pulsera10 from '../../assets/images/alpaca-pulseras/pulsera10.jpg';
 import pulsera11 from '../../assets/images/alpaca-pulseras/pulsera11.jpg';
-import pulsera12 from '../../assets/images/alpaca-pulseras/pulsera12.jpg';
+
 
 
 const pulserasData = [
-  { id: 1, src: pulsera1, alt: 'Anillo con cuarzo rojo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: pulsera2, alt: 'Anillo con amatista', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: pulsera3, alt: 'Anillo con coral', title: 'Anillo con spondylus', description: 'A pedido' },
-  { id: 4, src: pulsera4, alt: 'Anillo con piedra turquesa', title: 'Anillo con crisocola', description: 'A pedido' },
-  { id: 5, src: pulsera5, alt: 'Anillo de diseño tribal', title: 'Anillo abalon marino', description: 'A pedido' },
-  { id: 6, src: pulsera6, alt: 'Anillo con piedra verde', title: 'Anillo estilo serpiente', description: 'A pedido' },
-  { id: 7, src: pulsera7, alt: 'Anillo con piedra verde', title: 'Anillo abalon', description: 'A pedido' },
-  { id: 8, src: pulsera8, alt: 'Anillo con piedra verde', title: 'Anillo amatista drusa', description: 'A pedido' },
-  { id: 9, src: pulsera9, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 10, src: pulsera10, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 11, src: pulsera11, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 12, src: pulsera12, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
+  { id: 1, src: pulsera1, alt: 'Anillo', title: 'Modelo en alambrismo', description: 'A pedido' },
+  { id: 2, src: pulsera2, alt: 'Anillo', title: 'Modelo brazalete clásico', description: 'A pedido' },
+  { id: 3, src: pulsera3, alt: 'Anillo', title: 'Brazalete martillado spondylus', description: 'A pedido' },
+  { id: 4, src: pulsera4, alt: 'Anillo', title: 'Brazalete placa abalon', description: 'A pedido' },
+  { id: 5, src: pulsera5, alt: 'Anillo', title: 'Brazalete clásico mediano', description: 'A pedido' },
+  { id: 6, src: pulsera6, alt: 'Anillo', title: 'Ágastas con cuero', description: 'A pedido' },
+  { id: 7, src: pulsera7, alt: 'Anillo', title: 'Brazalete en alambrismo gota', description: 'A pedido' },
+  { id: 8, src: pulsera8, alt: 'Anillo', title: 'Turquesa wrap', description: 'A pedido' },
+  { id: 9, src: pulsera9, alt: 'Anillo', title: 'Amatista martillado', description: 'A pedido' },
+  { id: 10, src: pulsera10, alt: 'Anillo', title: 'Trenzado envejeciso', description: 'A pedido' },
+  { id: 11, src: pulsera11, alt: 'Anillo', title: 'Modelo astrid turquesa', description: 'A pedido' },
   
+
 
 ];
 
@@ -56,13 +56,15 @@ const AlpacaPulseras = () => {
             Pulseras de Alpaca – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Pulseras únicos en alpaca, trabajados completamente a mano con técnicas de orfebrería artesanal.
-          Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal.
-          Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos.
-          El alambrismo aporta detalle y carácter, creando composiciones irrepetibles.
-          Joyas con alma, inspiradas en lo místico y lo ancestral.
+           Pulseras forjadas a mano en alpaca, con un brillo natural y alta resistencia al uso diario.
+            Combinamos soldadura y alambrismo para lograr estructuras sólidas y artísticas.
+            Incorporamos piedras naturales, cuarzos, nácar y spondylus en composiciones únicas.
+            El acabado envejecido en algunas piezas les da un aire atemporal y auténtico.
+            Cada pulsera es un diseño original, con fuerza visual y equilibrio.
+            La alpaca, con su brillo elegante, destaca la belleza de cada material.
+            Son joyas hechas con dedicación, pensadas para acompañarte con estilo.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {pulserasData.map((pulsera, idx) => (
               <div
                 key={pulsera.id}
@@ -77,7 +79,7 @@ const AlpacaPulseras = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <h3 className="text-md font-medium">{pulsera.title}</h3>
-                  <p className="text-sm text-gray-200">{pulsera.description}</p>
+                  <p className="hidden text-sm text-gray-200">{pulsera.description}</p>
                 </div>
               </div>
             ))}

@@ -10,12 +10,12 @@ import collar6 from '../../assets/images/plata-collares/collar6.jpg';
 
 
 const collaresData = [
-  { id: 1, src: collar1, alt: 'Collar 1', title: 'Collar 1', description: 'A pedido' },
-  { id: 2, src: collar2, alt: 'Collar 2', title: 'Collar 2', description: 'A pedido' },
-  { id: 3, src: collar3, alt: 'Collar 3', title: 'Collar 3', description: 'A pedido' },
-  { id: 4, src: collar4, alt: 'Collar 4', title: 'Collar 4', description: 'A pedido' },
-  { id: 5, src: collar5, alt: 'Collar 5', title: 'Collar 5', description: 'A pedido' },
-  { id: 6, src: collar6, alt: 'Collar 6', title: 'Collar 6', description: 'A pedido' },
+  { id: 1, src: collar1, alt: 'Collar 1', title: '001', description: 'A pedido' },
+  { id: 2, src: collar2, alt: 'Collar 2', title: '002', description: 'A pedido' },
+  { id: 3, src: collar3, alt: 'Collar 3', title: '003', description: 'A pedido' },
+  { id: 4, src: collar4, alt: 'Collar 4', title: '004', description: 'A pedido' },
+  { id: 5, src: collar5, alt: 'Collar 5', title: '005', description: 'A pedido' },
+  { id: 6, src: collar6, alt: 'Collar 6', title: '006', description: 'A pedido' },
 
 ];
 
@@ -43,11 +43,13 @@ const PlataCollares = () => {
             Collares de Plata – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Collares únicas en plata, trabajadas completamente a mano con técnicas de orfebrería artesanal.
-           Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal. 
-           Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos. 
-           El alambrismo aporta detalle y carácter, creando composiciones irrepetibles. 
-           Joyas con alma, inspiradas en lo místico y lo ancestral.
+          Collares y dijes en plata 950, forjados a mano con técnicas ancestrales de orfebrería artesanal.
+            Cada diseño es irrepetible, con estructuras en alambrismo que abrazan piedras únicas.
+            Incorporamos cuarzos, spondylus, nácar y elementos naturales que aportan simbolismo y color.
+            Algunos dijes poseen acabados envejecidos que revelan una belleza atemporal.
+            La plata resalta como un hilo conductor de energía y sofisticación.
+            Inspirados en lo espiritual y lo natural, cada pieza guarda un mensaje.
+            Son amuletos modernos, cargados de historia y elegancia artesanal.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {collaresData.map((collar, idx) => (
@@ -63,8 +65,8 @@ const PlataCollares = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-lg font-medium">{collar.title}</h3>
-                  <p className="text-sm text-gray-200">{collar.description}</p>
+                  <h3 className="text-md font-medium">{collar.title}</h3>
+                  <p className="hidden text-sm text-gray-200">{collar.description}</p>
                 </div>
               </div>
             ))}

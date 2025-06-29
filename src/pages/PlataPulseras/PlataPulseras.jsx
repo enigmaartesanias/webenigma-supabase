@@ -17,32 +17,26 @@ import pulsera13 from '../../assets/images/plata-pulseras/pulsera13.jpg';
 import pulsera14 from '../../assets/images/plata-pulseras/pulsera14.jpg';
 import pulsera15 from '../../assets/images/plata-pulseras/pulsera15.jpg';
 import pulsera16 from '../../assets/images/plata-pulseras/pulsera16.jpg';
-import pulsera17 from '../../assets/images/plata-pulseras/pulsera17.jpg';
-import pulsera18 from '../../assets/images/plata-pulseras/pulsera18.jpg';
-import pulsera19 from '../../assets/images/plata-pulseras/pulsera19.jpg';
-import pulsera20 from '../../assets/images/plata-pulseras/pulsera20.jpg';
+
 
 const pulserasData = [
-  { id: 1, src: pulsera1, alt: 'Pulsera 1', title: 'Pulsera 1', description: 'A pedido' },
-  { id: 2, src: pulsera2, alt: 'Pulsera 2', title: 'Pulsera 2', description: 'A pedido' },
-  { id: 3, src: pulsera3, alt: 'Pulsera 3', title: 'Pulsera 3', description: 'A pedido' },
-  { id: 4, src: pulsera4, alt: 'Pulsera 4', title: 'Pulsera 4', description: 'A pedido' },
-  { id: 5, src: pulsera5, alt: 'Pulsera 5', title: 'Pulsera 5', description: 'A pedido' },
-  { id: 6, src: pulsera6, alt: 'Pulsera 6', title: 'Pulsera 6', description: 'A pedido' },
-  { id: 7, src: pulsera7, alt: 'Pulsera 7', title: 'Pulsera 7', description: 'A pedido' },
-  { id: 8, src: pulsera8, alt: 'Pulsera 8', title: 'Pulsera 8', description: 'A pedido' },
-  { id: 9, src: pulsera9, alt: 'Pulsera 9', title: 'Pulsera 9', description: 'A pedido' },
-  { id: 10, src: pulsera10, alt: 'Pulsera 10', title: 'Pulsera 10', description: 'A pedido' },
-  { id: 11, src: pulsera11, alt: 'Pulsera 11', title: 'Pulsera 11', description: 'A pedido' },
-  { id: 12, src: pulsera12, alt: 'Pulsera 12', title: 'Pulsera 12', description: 'A pedido' },
-  { id: 13, src: pulsera13, alt: 'Pulsera 13', title: 'Pulsera 13', description: 'A pedido' },
-  { id: 14, src: pulsera14, alt: 'Pulsera 14', title: 'Pulsera 14', description: 'A pedido' },
-  { id: 15, src: pulsera15, alt: 'Pulsera 15', title: 'Pulsera 15', description: 'A pedido' },
-  { id: 16, src: pulsera16, alt: 'Pulsera 16', title: 'Pulsera 16', description: 'A pedido' },
-  { id: 17, src: pulsera17, alt: 'Pulsera 17', title: 'Pulsera 17', description: 'A pedido' },
-  { id: 18, src: pulsera18, alt: 'Pulsera 18', title: 'Pulsera 18', description: 'A pedido' },
-  { id: 19, src: pulsera19, alt: 'Pulsera 19', title: 'Pulsera 19', description: 'A pedido' },
-  { id: 20, src: pulsera20, alt: 'Pulsera 20', title: 'Pulsera 20', description: 'A pedido' },
+  { id: 1, src: pulsera1, alt: 'Pulsera 1', title: 'Colibrí tejida', description: 'A pedido' },
+  { id: 2, src: pulsera2, alt: 'Pulsera 2', title: 'Nacar con perlas de río', description: 'A pedido' },
+  { id: 3, src: pulsera3, alt: 'Pulsera 3', title: 'Crisocola tejida', description: 'A pedido' },
+  { id: 4, src: pulsera4, alt: 'Pulsera 4', title: 'Spondylus tejida', description: 'A pedido' },
+  { id: 5, src: pulsera5, alt: 'Pulsera 5', title: 'Spondylus con hilo encerado', description: 'A pedido' },
+  { id: 6, src: pulsera6, alt: 'Pulsera 6', title: 'Onix con hilo encerado', description: 'A pedido' },
+  { id: 7, src: pulsera7, alt: 'Pulsera 7', title: 'Lapislázuli grap', description: 'A pedido' },
+  { id: 8, src: pulsera8, alt: 'Pulsera 8', title: 'Crisocola grap', description: 'A pedido' },
+  { id: 9, src: pulsera9, alt: 'Pulsera 9', title: 'Personalizada', description: 'A pedido' },
+  { id: 10, src: pulsera10, alt: 'Pulsera 10', title: 'Aldea de la hoja', description: 'A pedido' },
+  { id: 11, src: pulsera11, alt: 'Pulsera 11', title: 'Ojo de gato azul y cuero', description: 'A pedido' },
+  { id: 12, src: pulsera12, alt: 'Pulsera 12', title: 'Amazonita con aros', description: 'A pedido' },
+  { id: 13, src: pulsera13, alt: 'Pulsera 13', title: 'Cuarzo cristal envejecido', description: 'A pedido' },
+  { id: 14, src: pulsera14, alt: 'Pulsera 14', title: 'Placa en cuero', description: 'A pedido' },
+  { id: 15, src: pulsera15, alt: 'Pulsera 15', title: 'Onix tejida hilo encerado', description: 'A pedido' },
+  { id: 16, src: pulsera16, alt: 'Pulsera 16', title: 'Spondylus tejido con hilo encerado', description: 'A pedido' },
+ 
 ];
 
 const PlataPulseras = () => {
@@ -69,11 +63,13 @@ const PlataPulseras = () => {
             Pulseras de Plata – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Pulseras únicas en plata, trabajadas completamente a mano con técnicas de orfebrería artesanal.
-           Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal. 
-           Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos. 
-           El alambrismo aporta detalle y carácter, creando composiciones irrepetibles. 
-           Joyas con alma, inspiradas en lo místico y lo ancestral.
+           Pulseras elaboradas artesanalmente en plata 950, combinando técnicas de orfebrería tradicional.
+            Cada pieza es única, con detalles en alambrismo que aportan estructura y movimiento.
+            Las piedras naturales, cuarzos y spondylus otorgan color, energía y textura a cada diseño.
+            Algunas tienen un acabado envejecido que realza su esencia orgánica y atemporal.
+            Son creaciones pensadas para realzar tu estilo con elegancia y autenticidad.
+            Inspiradas en formas naturales y patrones culturales, llevan una huella artística.
+            Hechas completamente a mano, con el alma puesta en cada curva y detalle.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {pulserasData.map((pulsera, idx) => (
@@ -89,8 +85,8 @@ const PlataPulseras = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-lg font-medium">{pulsera.title}</h3>
-                  <p className="text-sm text-gray-200">{pulsera.description}</p>
+                  <h3 className="text-md font-medium">{pulsera.title}</h3>
+                  <p className="hidden text-sm text-gray-200">{pulsera.description}</p>
                 </div>
               </div>
             ))}

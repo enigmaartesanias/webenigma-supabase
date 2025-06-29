@@ -106,18 +106,18 @@ const Header = () => {
           )}
 
           <ul className="flex flex-col md:flex-row md:space-x-6 md:items-center px-4 pb-4 md:pb-0 pt-4 h-full overflow-y-auto md:h-auto md:overflow-visible">
-            {/* Nosotros */}
+            {/* Sobre Mi */}
             <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:text-gray-500"
-                onClick={() => {
-                  if (window.innerWidth < 768) toggleMenu();
-                  setActiveDropdown(null);
-                }}
-              >
-                Sobre mí
-              </a>
+          <Link
+           to="/sobremi"
+           className="block px-4 py-2 hover:text-gray-500"
+           onClick={() => {
+           if (window.innerWidth < 768) toggleMenu();
+           setActiveDropdown(null);
+         }}
+          >
+            Sobre mí
+           </Link>
             </li>
 
             {/* Materiales con submenús */}
@@ -154,33 +154,33 @@ const Header = () => {
               </li>
             ))}
 
-            {/* Personalizados */}
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:text-gray-500"
-                onClick={() => {
-                  if (window.innerWidth < 768) toggleMenu();
-                  setActiveDropdown(null);
-                }}
-              >
-                Personalizados
-              </a>
-            </li>
+           {/* Personalizados */}
+          <li>
+          <Link
+            to="/personalizado"
+            className="block px-4 py-2 hover:text-gray-500"
+            onClick={() => {
+            if (window.innerWidth < 768) toggleMenu();
+            setActiveDropdown(null);
+            }}
+          >
+            Personalizados
+            </Link>
+          </li>
 
-            {/* Contacto */}
-            <li>
-              <a
-                href="#"
-                className="block px-4 py-2 hover:text-gray-500"
-                onClick={() => {
-                  if (window.innerWidth < 768) toggleMenu();
-                  setActiveDropdown(null);
-                }}
-              >
-                Contacto
-              </a>
-            </li>
+          {/* Contacto */}
+          <li>
+          <Link
+           to="/contacto"
+           className="block px-4 py-2 hover:text-gray-500"
+            onClick={() => {
+            if (window.innerWidth < 768) toggleMenu();
+             setActiveDropdown(null);
+           }}
+          >
+           Contacto
+          </Link>
+          </li>
           </ul>
         </nav>
       </div>

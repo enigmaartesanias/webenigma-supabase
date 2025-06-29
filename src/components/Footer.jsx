@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaFacebook, FaInstagram } from 'react-icons/fa'; // Importa iconos de Font Awesome
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa'; // Importa iconos de Font Awesome
 
 const Footer = () => {
   return (
@@ -34,12 +34,15 @@ const Footer = () => {
           <div>
           <h3 className="text-lg font-semibold mb-4">Redes Sociales</h3>
           <div className="flex items-center space-x-4 justify-center">
-           <a href="#" className="text-gray-400 hover:text-white">
+           <a href="https://www.instagram.com/enigma_artesanias/" className="text-gray-400 hover:text-white">
           <FaFacebook size={24} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-white">
+          <a href="https://www.facebook.com/enigmaartesaniasyaccesorios" className="text-gray-400 hover:text-white">
           <FaInstagram size={24} />
          </a>
+         <a href="https://wa.me/51960282376" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp size={24} />
+              </a>
         </div>
         </div>
         </div>

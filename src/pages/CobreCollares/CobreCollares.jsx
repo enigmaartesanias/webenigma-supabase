@@ -16,18 +16,18 @@ import collar12 from '../../assets/images/cobre-collares/collar12.jpg';
 
 
 const collaresData = [
-  { id: 1, src: collar1, alt: 'Anillo con cuarzo rojo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: collar2, alt: 'Anillo con amatista', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: collar3, alt: 'Anillo con coral', title: 'Anillo con spondylus', description: 'A pedido' },
-  { id: 4, src: collar4, alt: 'Anillo con piedra turquesa', title: 'Anillo con crisocola', description: 'A pedido' },
-  { id: 5, src: collar5, alt: 'Anillo de diseño tribal', title: 'Anillo abalon marino', description: 'A pedido' },
-  { id: 6, src: collar6, alt: 'Anillo con piedra verde', title: 'Anillo estilo serpiente', description: 'A pedido' },
-  { id: 7, src: collar7, alt: 'Anillo con piedra verde', title: 'Anillo abalon', description: 'A pedido' },
-  { id: 8, src: collar8, alt: 'Anillo con piedra verde', title: 'Anillo amatista drusa', description: 'A pedido' },
-  { id: 9, src: collar9, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 10, src: collar10, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 11, src: collar11, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 12, src: collar12, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
+  { id: 1, src: collar1, alt: 'Anillo con cuarzo rojo', title: '001', description: 'A pedido' },
+  { id: 2, src: collar2, alt: 'Anillo con amatista', title: '002', description: 'A pedido' },
+  { id: 3, src: collar3, alt: 'Anillo con coral', title: '003', description: 'A pedido' },
+  { id: 4, src: collar4, alt: 'Anillo con piedra turquesa', title: '004', description: 'A pedido' },
+  { id: 5, src: collar5, alt: 'Anillo de diseño tribal', title: '005', description: 'A pedido' },
+  { id: 6, src: collar6, alt: 'Anillo con piedra verde', title: '006', description: 'A pedido' },
+  { id: 7, src: collar7, alt: 'Anillo con piedra verde', title: '007', description: 'A pedido' },
+  { id: 8, src: collar8, alt: 'Anillo con piedra verde', title: '008', description: 'A pedido' },
+  { id: 9, src: collar9, alt: 'Anillo con piedra verde', title: '009', description: 'A pedido' },
+  { id: 10, src: collar10, alt: 'Anillo con piedra verde', title: '010', description: 'A pedido' },
+  { id: 11, src: collar11, alt: 'Anillo con piedra verde', title: '011', description: 'A pedido' },
+  { id: 12, src: collar12, alt: 'Anillo con piedra verde', title: '012', description: 'A pedido' },
   
 
 ];
@@ -53,14 +53,18 @@ const CobreCollares = () => {
       <main className="bg-white py-8 md:py-10 pt-16">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <h1 className="mt-6 md:mt-0 text-1xl md:text-3xl lg:text-3xl font-semibold text-center text-gray-900 mb-4">
-            Collares de Alpaca – Arte en Orfebrería Artesanal
+            Collares de Cobre – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Collares únicos en alpaca, trabajados completamente a mano con técnicas de orfebrería artesanal.
-          Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal.
-          Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos.
-          El alambrismo aporta detalle y carácter, creando composiciones irrepetibles.
-          Joyas con alma, inspiradas en lo místico y lo ancestral.
+           Collares y dijes creados en cobre, modelado a mano con técnicas de orfebrería y alambrismo.
+            Este metal, con su cálido color rojizo, ofrece una presencia vibrante y natural.
+            Cada pieza se embellece con resinas, piedras naturales, cuarzos, spondylus y otros materiales orgánicos.
+            La soldadura artesanal permite estructuras firmes, mientras el alambrismo añade detalle y forma.
+            Algunos llevan un acabado envejecido que intensifica su carácter místico y único.
+            El cobre convierte cada diseño en un amuleto lleno de simbolismo y energía.
+            Joyas diferentes, auténticas y cargadas de expresión artesanal.
+
+
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {collaresData.map((collar, idx) => (
@@ -77,7 +81,7 @@ const CobreCollares = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <h3 className="text-md font-medium">{collar.title}</h3>
-                  <p className="text-sm text-gray-200">{collar.description}</p>
+                  <p className="hidden text-sm text-gray-200">{collar.description}</p>
                 </div>
               </div>
             ))}

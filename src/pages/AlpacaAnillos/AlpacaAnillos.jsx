@@ -16,18 +16,18 @@ import anillo12 from '../../assets/images/alpaca-anillos/anillo12.jpg';
 
 
 const anillosData = [
-  { id: 1, src: anillo1, alt: 'Anillo con cuarzo rojo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: anillo2, alt: 'Anillo con amatista', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: anillo3, alt: 'Anillo con coral', title: 'Anillo con spondylus', description: 'A pedido' },
-  { id: 4, src: anillo4, alt: 'Anillo con piedra turquesa', title: 'Anillo con crisocola', description: 'A pedido' },
-  { id: 5, src: anillo5, alt: 'Anillo de diseño tribal', title: 'Anillo abalon marino', description: 'A pedido' },
-  { id: 6, src: anillo6, alt: 'Anillo con piedra verde', title: 'Anillo estilo serpiente', description: 'A pedido' },
-  { id: 7, src: anillo7, alt: 'Anillo con piedra verde', title: 'Anillo abalon', description: 'A pedido' },
-  { id: 8, src: anillo8, alt: 'Anillo con piedra verde', title: 'Anillo amatista drusa', description: 'A pedido' },
-  { id: 9, src: anillo9, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 10, src: anillo10, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 11, src: anillo11, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 12, src: anillo12, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
+  { id: 1, src: anillo1, alt: 'Anillo', title: 'Esferas de cuarzos', description: 'A pedido' },
+  { id: 2, src: anillo2, alt: 'Anillo', title: 'Amatista natural envejecido', description: 'A pedido' },
+  { id: 3, src: anillo3, alt: 'Anillo', title: 'Crisocola wrap', description: 'A pedido' },
+  { id: 4, src: anillo4, alt: 'Anillo', title: 'Modelos en alambrismo envejecido', description: 'A pedido' },
+  { id: 5, src: anillo5, alt: 'Anillo', title: 'Cuarzo rosado wrap', description: 'A pedido' },
+  { id: 6, src: anillo6, alt: 'Anillo', title: 'Ágatas envueltas', description: 'A pedido' },
+  { id: 7, src: anillo7, alt: 'Anillo', title: 'Muranos con resina', description: 'A pedido' },
+  { id: 8, src: anillo8, alt: 'Anillo', title: 'Estilo tailandes', description: 'A pedido' },
+  { id: 9, src: anillo9, alt: 'Anillo', title: 'wrap turquesa reconstituida', description: 'A pedido' },
+  { id: 10, src: anillo10, alt: 'Anillo', title: 'Rojo reconstituido', description: 'A pedido' },
+  { id: 11, src: anillo11, alt: 'Anillo', title: 'Turquesa alabrismo', description: 'A pedido' },
+  { id: 12, src: anillo12, alt: 'Anillo', title: 'Modelo soles con ágatas', description: 'A pedido' },
   
 
 ];
@@ -56,13 +56,15 @@ const AlpacaAnillos = () => {
             Anillos de Alpaca – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Anillos únicos en alpaca, trabajados completamente a mano con técnicas de orfebrería artesanal.
-          Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal.
-          Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos.
-          El alambrismo aporta detalle y carácter, creando composiciones irrepetibles.
-          Joyas con alma, inspiradas en lo místico y lo ancestral.
+           Anillos trabajados a mano en alpaca, una aleación duradera y brillante que no envidia a la plata.
+            Cada pieza fusiona técnicas de soldadura tradicional con alambrismo detallado.
+            Usamos piedras naturales, cuarzos, nácar y spondylus que aportan carácter y color.
+            Algunos diseños incluyen acabados envejecidos que resaltan su esencia artesanal.
+            La alpaca refleja una luz cálida que resalta la elegancia del diseño.
+            Son piezas exclusivas, con formas únicas y llenas de intención.
+            Joyas resistentes, con historia y alma, creadas para perdurar.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {anillosData.map((anillo, idx) => (
               <div
                 key={anillo.id}
@@ -77,7 +79,7 @@ const AlpacaAnillos = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <h3 className="text-md font-medium">{anillo.title}</h3>
-                  <p className="text-sm text-gray-200">{anillo.description}</p>
+                  <p className="hidden text-sm text-gray-200">{anillo.description}</p>
                 </div>
               </div>
             ))}

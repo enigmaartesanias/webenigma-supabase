@@ -13,15 +13,15 @@ import anillo9 from '../../assets/images/cobre-anillos/anillo9.jpg';
 
 
 const anillosData = [
-  { id: 1, src: anillo1, alt: 'Anillo con cuarzo rojo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: anillo2, alt: 'Anillo con amatista', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: anillo3, alt: 'Anillo con coral', title: 'Anillo con spondylus', description: 'A pedido' },
-  { id: 4, src: anillo4, alt: 'Anillo con piedra turquesa', title: 'Anillo con crisocola', description: 'A pedido' },
-  { id: 5, src: anillo5, alt: 'Anillo de diseño tribal', title: 'Anillo abalon marino', description: 'A pedido' },
-  { id: 6, src: anillo6, alt: 'Anillo con piedra verde', title: 'Anillo estilo serpiente', description: 'A pedido' },
-  { id: 7, src: anillo7, alt: 'Anillo con piedra verde', title: 'Anillo abalon', description: 'A pedido' },
-  { id: 8, src: anillo8, alt: 'Anillo con piedra verde', title: 'Anillo amatista drusa', description: 'A pedido' },
-  { id: 9, src: anillo9, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
+  { id: 1, src: anillo1, alt: 'Anillo', title: 'Wrap sodalita', description: 'A pedido' },
+  { id: 2, src: anillo2, alt: 'Anillo', title: 'Wrap amatista natural', description: 'A pedido' },
+  { id: 3, src: anillo3, alt: 'Anillo', title: 'Wrap ávalon', description: 'A pedido' },
+  { id: 4, src: anillo4, alt: 'Anillo', title: 'Labradorita clásico', description: 'A pedido' },
+  { id: 5, src: anillo5, alt: 'Anillo', title: 'Crisocola serpiente', description: 'A pedido' },
+  { id: 6, src: anillo6, alt: 'Anillo', title: 'Wrap ónix', description: 'A pedido' },
+  { id: 7, src: anillo7, alt: 'Anillo', title: 'Wrap crisocola', description: 'A pedido' },
+  { id: 8, src: anillo8, alt: 'Anillo', title: 'Spondylus serpiente', description: 'A pedido' },
+  { id: 9, src: anillo9, alt: 'Anillo', title: 'Wrap ojo de tigre', description: 'A pedido' },
 
 ];
 
@@ -49,11 +49,15 @@ const CobreAnillos = () => {
             Anillos de Cobre – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Anillos únicos en cobre, trabajados completamente a mano con técnicas de orfebrería artesanal.
-          Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal.
-          Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos.
-          El alambrismo aporta detalle y carácter, creando composiciones irrepetibles.
-          Joyas con alma, inspiradas en lo místico y lo ancestral.
+           Anillos elaborados en cobre, un metal noble con su distintivo tono anaranjado que transmite calidez.
+            Gracias a su maleabilidad, logramos diseños orgánicos y formas únicas hechas completamente a mano.
+            Cada anillo combina técnicas de soldadura y alambrismo para lograr piezas sólidas y detalladas.
+            Incorporamos piedras naturales, cuarzos, resinas y spondylus que aportan color y textura.
+            El acabado envejecido realza su carácter rústico y su belleza atemporal.
+            Son joyas con personalidad, pensadas para quienes buscan estilo auténtico.
+            Diseños únicos que unen lo ancestral con la creatividad moderna.
+
+
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {anillosData.map((anillo, idx) => (
@@ -70,7 +74,7 @@ const CobreAnillos = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <h3 className="text-md font-medium">{anillo.title}</h3>
-                  <p className="text-sm text-gray-200">{anillo.description}</p>
+                  <p className="hidden text-sm text-gray-200">{anillo.description}</p>
                 </div>
               </div>
             ))}

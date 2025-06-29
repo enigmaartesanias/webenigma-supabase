@@ -15,6 +15,10 @@ import AlpacaCollares from './pages/AlpacaCollares/AlpacaCollares';
 import CobreAretes from './pages/CobreAretes/CobreAretes';
 import CobrePulseras from './pages/CobrePulseras/CobrePulseras';
 import CobreCollares from './pages/CobreCollares/CobreCollares';
+import SobreMi from './pages/SobreMi/SobreMi';
+import Contacto from './pages/Contacto/Contacto';
+import Personalizado from './pages/Personalizado/Personalizado';
+
 
 
 const App = () => {
@@ -23,6 +27,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/sobremi" element={<SobreMi />} />
         <Route path="/plataanillos" element={<PlataAnillos />} />
         <Route path="/platapulseras" element={<PlataPulseras />} />
         <Route path="/platacollares" element={<PlataCollares />} />
@@ -35,6 +40,8 @@ const App = () => {
         <Route path="/alpacaaretes" element={<AlpacaAretes />} />
         <Route path="/alpacacollares" element={<AlpacaCollares />} />
         <Route path="/cobrearetes" element={<CobreAretes />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/personalizado" element={<Personalizado />} />
       </Routes>
       <Footer />
     </Router>

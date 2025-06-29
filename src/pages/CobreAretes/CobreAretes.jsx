@@ -8,9 +8,9 @@ import arete3 from '../../assets/images/cobre-aretes/arete3.jpg';
 
 
 const aretesData = [
-  { id: 1, src: arete1, alt: 'Anillo con cuarzo rojo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: arete2, alt: 'Anillo con amatista', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: arete3, alt: 'Anillo con coral', title: 'Anillo con spondylus', description: 'A pedido' },
+  { id: 1, src: arete1, alt: 'Anillo con cuarzo rojo', title: '001', description: 'A pedido' },
+  { id: 2, src: arete2, alt: 'Anillo con amatista', title: '002', description: 'A pedido' },
+  { id: 3, src: arete3, alt: 'Anillo con coral', title: '003', description: 'A pedido' },
  
 
 ];
@@ -36,14 +36,16 @@ const CobreAretes = () => {
       <main className="bg-white py-8 md:py-10 pt-16">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <h1 className="mt-6 md:mt-0 text-1xl md:text-3xl lg:text-3xl font-semibold text-center text-gray-900 mb-4">
-            Aretes de Alpaca – Arte en Orfebrería Artesanal
+            Aretes de Cobre/Bronce – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Aretes únicos en alpaca, trabajados completamente a mano con técnicas de orfebrería artesanal.
-          Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal.
-          Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos.
-          El alambrismo aporta detalle y carácter, creando composiciones irrepetibles.
-          Joyas con alma, inspiradas en lo místico y lo ancestral.
+           Aretes forjados en cobre, con ese tono anaranjado natural que aporta calidez y carácter.
+            Cada pieza es trabajada a mano, uniendo alambrismo y soldadura con acabados únicos.
+            Integramos aplicaciones de bronce y alpaca que aportan contraste, brillo y fuerza visual.
+            Decoramos con piedras naturales, resinas, cuarzos, spondylus y nácar, en combinaciones exclusivas.
+            El acabado envejecido resalta su esencia rústica y artesanal, única en cada par.
+            Son joyas ligeras, versátiles y con una fuerte presencia estética.
+            Ideales para quienes valoran el arte manual, la mezcla de metales y lo diferente.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {aretesData.map((arete, idx) => (
@@ -60,7 +62,7 @@ const CobreAretes = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <h3 className="text-md font-medium">{arete.title}</h3>
-                  <p className="text-sm text-gray-200">{arete.description}</p>
+                  <p className="hidden text-sm text-gray-200">{arete.description}</p>
                 </div>
               </div>
             ))}

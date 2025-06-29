@@ -8,9 +8,9 @@ import arete3 from '../../assets/images/alpaca-aretes/arete3.jpg';
 
 
 const aretesData = [
-  { id: 1, src: arete1, alt: 'Anillo con cuarzo rojo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: arete2, alt: 'Anillo con amatista', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: arete3, alt: 'Anillo con coral', title: 'Anillo con spondylus', description: 'A pedido' },
+  { id: 1, src: arete1, alt: 'Anillo con cuarzo rojo', title: '001', description: 'A pedido' },
+  { id: 2, src: arete2, alt: 'Anillo con amatista', title: '002', description: 'A pedido' },
+  { id: 3, src: arete3, alt: 'Anillo con coral', title: '003', description: 'A pedido' },
  
 
 ];
@@ -39,11 +39,13 @@ const AlpacaAretes = () => {
             Aretes de Alpaca – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Aretes únicos en alpaca, trabajados completamente a mano con técnicas de orfebrería artesanal.
-          Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal.
-          Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos.
-          El alambrismo aporta detalle y carácter, creando composiciones irrepetibles.
-          Joyas con alma, inspiradas en lo místico y lo ancestral.
+           Aretes elaborados artesanalmente en alpaca, un material noble y luminoso de gran durabilidad.
+            Su estructura une el arte de la soldadura con la delicadeza del alambrismo.
+            Utilizamos piedras naturales, cuarzos, nácar y spondylus en diseños ligeros y únicos.
+            Algunos tienen acabado envejecido, dando un toque rústico y sofisticado.
+            El brillo de la alpaca realza cada detalle con un encanto propio.
+            Cada par es irrepetible, pensado para expresar personalidad y autenticidad.
+            Joyas con esencia artesanal, hechas a mano con pasión y estilo.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {aretesData.map((arete, idx) => (
@@ -60,7 +62,7 @@ const AlpacaAretes = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <h3 className="text-md font-medium">{arete.title}</h3>
-                  <p className="text-sm text-gray-200">{arete.description}</p>
+                  <p className="hidden text-sm text-gray-200">{arete.description}</p>
                 </div>
               </div>
             ))}

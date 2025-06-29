@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import principal from "../../assets/images/principal.jpg";
 import principal2 from "../../assets/images/principal2.jpg";
-import principal3 from "../../assets/images/principal3.jpg";
+import principal3 from "../../assets/images/principal.jpg";
+
 const images = [principal, principal2, principal3];
 
 const Hero = () => {
@@ -17,10 +18,9 @@ const Hero = () => {
 
   return (
     <section
-      className="relative w-full top-0 h-auto min-h-[400px]  flex flex-col items-center justify-center bg-gray-800 overflow-hidden
-                 pt-36 md:pt-30" // <-- ¡CAMBIO CLAVE AQUÍ! Añadimos padding-top para móviles
-    >
-      <div className="absolute inset-0 flex items-center justify-center w-full lg:h-100">
+  className="relative w-full top-0 min-h-[700px] md:min-h-[900px] lg:min-h-[1100px] flex flex-col items-center justify-center bg-red-300 pt-60"
+>
+      <div className="absolute inset-0 w-full h-full">
         {images.map((image, index) => (
           <img
             key={index}
@@ -33,14 +33,16 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Contenedor del texto SEPARADO */}
-      <div className="relative z-10 text-center text-white px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-12 md:py-16 lg:py-20">
-        <h1 className="text-lg font-bold sm:text-3xl hidden md:text-4xl lg:text-5xl drop-shadow-lg">
-          <span className="text-yellow-400">Enigma Artesanías y Accesorios</span>
-        </h1>
-        <p className="mt-2 text-sm hidden sm:text-xl md:text-2xl drop-shadow-md">
-          Diseños únicos con historia y tradición
-        </p>
+      {/* Contenedor del texto en caja semitransparente */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 ">
+        <div className="bg-black bg-opacity-50 rounded-lg px-2 py-1 mt-20">
+          <h1 className="text-white text-center text-1xl sm:text-3xl md:text-4xl lg:text-3xl drop-shadow-lg">
+            Enigma artesanías y accesorios
+          </h1>
+          <p className="text-gray-200 text-center text-base sm:text-lg mt-2">
+      de Aldo Magallanes
+    </p>
+        </div>
       </div>
     </section>
   );

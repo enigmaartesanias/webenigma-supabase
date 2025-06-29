@@ -25,27 +25,27 @@ import pulsera21 from '../../assets/images/cobre-pulseras/pulsera21.jpg';
 
 
 const pulserasData = [
-  { id: 1, src: pulsera1, alt: 'Anillo con cuarzo rojo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: pulsera2, alt: 'Anillo con amatista', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: pulsera3, alt: 'Anillo con coral', title: 'Anillo con spondylus', description: 'A pedido' },
-  { id: 4, src: pulsera4, alt: 'Anillo con piedra turquesa', title: 'Anillo con crisocola', description: 'A pedido' },
-  { id: 5, src: pulsera5, alt: 'Anillo de diseño tribal', title: 'Anillo abalon marino', description: 'A pedido' },
-  { id: 6, src: pulsera6, alt: 'Anillo con piedra verde', title: 'Anillo estilo serpiente', description: 'A pedido' },
-  { id: 7, src: pulsera7, alt: 'Anillo con piedra verde', title: 'Anillo abalon', description: 'A pedido' },
-  { id: 8, src: pulsera8, alt: 'Anillo con piedra verde', title: 'Anillo amatista drusa', description: 'A pedido' },
-  { id: 9, src: pulsera9, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 10, src: pulsera10, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 11, src: pulsera11, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 12, src: pulsera12, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 13, src: pulsera13, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 14, src: pulsera14, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 15, src: pulsera15, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 16, src: pulsera16, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 17, src: pulsera17, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 18, src: pulsera18, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 19, src: pulsera19, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 20, src: pulsera20, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
-  { id: 21, src: pulsera21, alt: 'Anillo con piedra verde', title: 'Anillo onix', description: 'A pedido' },
+  { id: 1, src: pulsera1, alt: 'Anillo con cuarzo rojo', title: 'Wrap luna', description: 'A pedido' },
+  { id: 2, src: pulsera2, alt: 'Anillo con amatista', title: 'wrap reconstituida turquesa', description: 'A pedido' },
+  { id: 3, src: pulsera3, alt: 'Anillo con coral', title: 'Wrap 3 crisocolas', description: 'A pedido' },
+  { id: 4, src: pulsera4, alt: 'Anillo con piedra turquesa', title: 'Martillado con resina', description: 'A pedido' },
+  { id: 5, src: pulsera5, alt: 'Anillo de diseño tribal', title: 'Cuarzo cristal martillado', description: 'A pedido' },
+  { id: 6, src: pulsera6, alt: 'Anillo con piedra verde', title: 'Crisocola cobre y bronce', description: 'A pedido' },
+  { id: 7, src: pulsera7, alt: 'Anillo con piedra verde', title: 'Malaquita tejida', description: 'A pedido' },
+  { id: 8, src: pulsera8, alt: 'Anillo con piedra verde', title: 'Personalizada con cuarzo', description: 'A pedido' },
+  { id: 9, src: pulsera9, alt: 'Anillo con piedra verde', title: 'Malaquita martillada', description: 'A pedido' },
+  { id: 10, src: pulsera10, alt: 'Anillo con piedra verde', title: 'Malaquita martillada', description: 'A pedido' },
+  { id: 11, src: pulsera11, alt: 'Anillo con piedra verde', title: 'Martillado con resina', description: 'A pedido' },
+  { id: 12, src: pulsera12, alt: 'Anillo con piedra verde', title: 'Sol de alambrismo con ágatas', description: 'A pedido' },
+  { id: 13, src: pulsera13, alt: 'Anillo con piedra verde', title: 'Spondylus nazca', description: 'A pedido' },
+  { id: 14, src: pulsera14, alt: 'Anillo con piedra verde', title: 'Wrap luna', description: 'A pedido' },
+  { id: 15, src: pulsera15, alt: 'Anillo con piedra verde', title: 'Mariposa en brazalete', description: 'A pedido' },
+  { id: 16, src: pulsera16, alt: 'Anillo con piedra verde', title: 'Mariposa tejida', description: 'A pedido' },
+  { id: 17, src: pulsera17, alt: 'Anillo con piedra verde', title: 'Modelo wrap alabrismo', description: 'A pedido' },
+  { id: 18, src: pulsera18, alt: 'Anillo con piedra verde', title: 'Tusquesa cascajo', description: 'A pedido' },
+  { id: 19, src: pulsera19, alt: 'Anillo con piedra verde', title: 'Corazon personalizado', description: 'A pedido' },
+  { id: 20, src: pulsera20, alt: 'Anillo con piedra verde', title: 'Entorchado ojo de tigre', description: 'A pedido' },
+  { id: 21, src: pulsera21, alt: 'Anillo con piedra verde', title: 'Personalizado con flor', description: 'A pedido' },
   
 
 ];
@@ -71,15 +71,16 @@ const CobrePulseras = () => {
       <main className="bg-white py-8 md:py-10 pt-16">
         <div className="container mx-auto px-4 md:px-8 lg:px-16">
           <h1 className="mt-6 md:mt-0 text-1xl md:text-3xl lg:text-3xl font-semibold text-center text-gray-900 mb-4">
-            Pulseras de Alpaca – Arte en Orfebrería Artesanal
+            Pulseras de Cobre – Arte en Orfebrería Artesanal
           </h1>
           <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
-           Pulseras únicos en alpaca, trabajados completamente a mano con técnicas de orfebrería artesanal.
-          Cada pieza lleva un delicado acabado envejecido que realza su esencia atemporal.
-          Fusionamos nácar, perlas, tejidos, piedras naturales y cuarzos en diseños exclusivos.
-          El alambrismo aporta detalle y carácter, creando composiciones irrepetibles.
-          Joyas con alma, inspiradas en lo místico y lo ancestral.
-          </p>
+            Pulseras hechas en cobre trabajado a mano, un metal resistente con un brillo cálido inconfundible.
+            Su versatilidad permite unir alambrismo con soldadura para formar estructuras artísticas y duraderas.
+            Cada pieza es embellecida con resinas, piedras naturales, cuarzos y nácar.
+            Algunas pulseras llevan acabados envejecidos que acentúan su esencia artesanal.
+            El cobre transforma cada diseño en una pieza viva, con historia y fuerza.
+            Son creaciones exclusivas, ligeras y cómodas, con carácter natural.
+            Joyas que destacan por su autenticidad y conexión con la tierra.          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {pulserasData.map((pulsera, idx) => (
               <div
@@ -95,7 +96,7 @@ const CobrePulseras = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
                   <h3 className="text-md font-medium">{pulsera.title}</h3>
-                  <p className="text-sm text-gray-200">{pulsera.description}</p>
+                  <p className="hidden text-sm text-gray-200">{pulsera.description}</p>
                 </div>
               </div>
             ))}
