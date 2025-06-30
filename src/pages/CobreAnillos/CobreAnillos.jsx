@@ -13,15 +13,15 @@ import anillo9 from '../../assets/images/cobre-anillos/anillo9.jpg';
 
 
 const anillosData = [
-  { id: 1, src: anillo1, alt: 'Anillo', title: 'Wrap sodalita', description: 'A pedido' },
-  { id: 2, src: anillo2, alt: 'Anillo', title: 'Wrap amatista natural', description: 'A pedido' },
-  { id: 3, src: anillo3, alt: 'Anillo', title: 'Wrap ávalon', description: 'A pedido' },
-  { id: 4, src: anillo4, alt: 'Anillo', title: 'Labradorita clásico', description: 'A pedido' },
-  { id: 5, src: anillo5, alt: 'Anillo', title: 'Crisocola serpiente', description: 'A pedido' },
-  { id: 6, src: anillo6, alt: 'Anillo', title: 'Wrap ónix', description: 'A pedido' },
-  { id: 7, src: anillo7, alt: 'Anillo', title: 'Wrap crisocola', description: 'A pedido' },
-  { id: 8, src: anillo8, alt: 'Anillo', title: 'Spondylus serpiente', description: 'A pedido' },
-  { id: 9, src: anillo9, alt: 'Anillo', title: 'Wrap ojo de tigre', description: 'A pedido' },
+  { id: 1, src: anillo1, alt: 'Anillo', title: 'Wrap sodalita', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
+  { id: 2, src: anillo2, alt: 'Anillo', title: 'Wrap amatista natural', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
+  { id: 3, src: anillo3, alt: 'Anillo', title: 'Wrap ávalon', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
+  { id: 4, src: anillo4, alt: 'Anillo', title: 'Labradorita clásico', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
+  { id: 5, src: anillo5, alt: 'Anillo', title: 'Crisocola serpiente', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
+  { id: 6, src: anillo6, alt: 'Anillo', title: 'Wrap ónix', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
+  { id: 7, src: anillo7, alt: 'Anillo', title: 'Wrap crisocola', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
+  { id: 8, src: anillo8, alt: 'Anillo', title: 'Spondylus serpiente', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
+  { id: 9, src: anillo9, alt: 'Anillo', title: 'Wrap ojo de tigre', description: 'Anillos en cobre , tiene varios calibre y mucho alambrismo, acabado envejecido y son regulables' },
 
 ];
 

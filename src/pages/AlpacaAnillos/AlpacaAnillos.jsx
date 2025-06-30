@@ -16,18 +16,18 @@ import anillo12 from '../../assets/images/alpaca-anillos/anillo12.jpg';
 
 
 const anillosData = [
-  { id: 1, src: anillo1, alt: 'Anillo', title: 'Esferas de cuarzos', description: 'A pedido' },
-  { id: 2, src: anillo2, alt: 'Anillo', title: 'Amatista natural envejecido', description: 'A pedido' },
-  { id: 3, src: anillo3, alt: 'Anillo', title: 'Crisocola wrap', description: 'A pedido' },
-  { id: 4, src: anillo4, alt: 'Anillo', title: 'Modelos en alambrismo envejecido', description: 'A pedido' },
-  { id: 5, src: anillo5, alt: 'Anillo', title: 'Cuarzo rosado wrap', description: 'A pedido' },
-  { id: 6, src: anillo6, alt: 'Anillo', title: 'Ágatas envueltas', description: 'A pedido' },
-  { id: 7, src: anillo7, alt: 'Anillo', title: 'Muranos con resina', description: 'A pedido' },
-  { id: 8, src: anillo8, alt: 'Anillo', title: 'Estilo tailandes', description: 'A pedido' },
-  { id: 9, src: anillo9, alt: 'Anillo', title: 'wrap turquesa reconstituida', description: 'A pedido' },
-  { id: 10, src: anillo10, alt: 'Anillo', title: 'Rojo reconstituido', description: 'A pedido' },
-  { id: 11, src: anillo11, alt: 'Anillo', title: 'Turquesa alabrismo', description: 'A pedido' },
-  { id: 12, src: anillo12, alt: 'Anillo', title: 'Modelo soles con ágatas', description: 'A pedido' },
+  { id: 1, src: anillo1, alt: 'Anillo', title: 'Esferas con cuarzos', description: 'Anillo regulable en alpaca con algo de alambre en el aro, es regulable' },
+  { id: 2, src: anillo2, alt: 'Anillo', title: 'Amatista natural', description: 'Piedra amatista natural , un engaste a presión, se puede cambiar el tipo de piedra' },
+  { id: 3, src: anillo3, alt: 'Anillo', title: 'Crisocola en alambrismo', description: 'Anillo con muchos detalles en calibres de alambre, tiene aplicación de bronce' },
+  { id: 4, src: anillo4, alt: 'Anillo', title: 'Modelos en alambrismo', description: 'Anillos con muchos detalles en calibres de alambre, acabado envejecido' },
+  { id: 5, src: anillo5, alt: 'Anillo', title: 'Cuarzo rosado alambrismo', description: 'Anillo en alpaca con muchos calibres de alambrismo' },
+  { id: 6, src: anillo6, alt: 'Anillo', title: 'Ágatas pequeñas envueltas', description: 'Tiene un engaste cono hojas a presión, varios colores de ágatas' },
+  { id: 7, src: anillo7, alt: 'Anillo', title: 'Muranos con resina', description: 'Flores de murano con resina , tambien son regulables' },
+  { id: 8, src: anillo8, alt: 'Anillo', title: 'Estilo tailandes', description: 'El detalle es que sirve para guardar algo pequeño o un recuerdo, con mucho alambrismo' },
+  { id: 9, src: anillo9, alt: 'Anillo', title: 'Wrap turquesa reconstituida', description: 'Piedra turquesa engastada a presión, acabado envejecido' },
+  { id: 10, src: anillo10, alt: 'Anillo', title: 'Rojo reconstituido dos piedras', description: 'Modelo de dos piedras en gota , acabado envejecido y regulable' },
+  { id: 11, src: anillo11, alt: 'Anillo', title: 'Turquesa ancha envejecida', description: 'Es como un aro , elegante y fuerte por el grosor' },
+  { id: 12, src: anillo12, alt: 'Anillo', title: 'Modelo soles con ágatas', description: 'Anillos tejidos en forma de sol con ágatas' },
   
 
 ];

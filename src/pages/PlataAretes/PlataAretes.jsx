@@ -14,16 +14,16 @@ import arete10 from '../../assets/images/plata-aretes/arete10.jpg';
 
 
 const aretesData = [
-  { id: 1, src: arete1, alt: 'Anillo con cuarzo rojo', title: '001', description: 'A pedido' },
-  { id: 2, src: arete2, alt: 'Anillo con amatista', title: '002', description: 'A pedido' },
-  { id: 3, src: arete3, alt: 'Anillo con coral', title: '003', description: 'A pedido' },
-  { id: 4, src: arete4, alt: 'Anillo con piedra turquesa', title: '004', description: 'A pedido' },
-  { id: 5, src: arete5, alt: 'Anillo de diseño tribal', title: '005', description: 'A pedido' },
-  { id: 6, src: arete6, alt: 'Anillo con piedra verde', title: '006', description: 'A pedido' },
-  { id: 7, src: arete7, alt: 'Anillo con piedra verde', title: '007', description: 'A pedido' },
-  { id: 8, src: arete8, alt: 'Anillo con piedra verde', title: '008', description: 'A pedido' },
-  { id: 9, src: arete9, alt: 'Anillo con piedra verde', title: '009', description: 'A pedido' },
-  { id: 10, src: arete10, alt: 'Anillo con piedra verde', title: '010', description: 'A pedido' },
+  { id: 1, src: arete1, alt: 'A', title: 'Modelos de trepadores', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 2, src: arete2, alt: 'A', title: 'Con acabado envejecido', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 3, src: arete3, alt: 'A', title: 'Modelos étnicos', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 4, src: arete4, alt: 'A', title: 'Flor envejecida', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 5, src: arete5, alt: 'A', title: 'Trepador tipo espiga', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 6, src: arete6, alt: 'A', title: 'Con flor colgantes', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 7, src: arete7, alt: 'A', title: 'Trepador con pluma', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 8, src: arete8, alt: 'A', title: 'Argollas étnicas', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 9, src: arete9, alt: 'A', title: 'Argollas étnicas', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 10, src: arete10, alt: 'A', title: 'Argollas étnicas', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
 
 
 ];

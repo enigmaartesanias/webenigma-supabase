@@ -10,12 +10,12 @@ import collar6 from '../../assets/images/plata-collares/collar6.jpg';
 
 
 const collaresData = [
-  { id: 1, src: collar1, alt: 'Collar 1', title: '001', description: 'A pedido' },
-  { id: 2, src: collar2, alt: 'Collar 2', title: '002', description: 'A pedido' },
-  { id: 3, src: collar3, alt: 'Collar 3', title: '003', description: 'A pedido' },
-  { id: 4, src: collar4, alt: 'Collar 4', title: '004', description: 'A pedido' },
-  { id: 5, src: collar5, alt: 'Collar 5', title: '005', description: 'A pedido' },
-  { id: 6, src: collar6, alt: 'Collar 6', title: '006', description: 'A pedido' },
+  { id: 1, src: collar1, alt: 'Collar 1', title: 'Sol en alambrismo', description: 'Dijes y collares en plata 950, diseños únicos en joyeria artesanal, aplicaciones de piedras y acabados envejecido' },
+  { id: 2, src: collar2, alt: 'Collar 2', title: 'Dije con spondylus', description: 'Dijes y collares en plata 950, diseños únicos en joyeria artesanal, aplicaciones de piedras y acabados envejecido' },
+  { id: 3, src: collar3, alt: 'Collar 3', title: 'Dije con ojo de gato', description: 'Dijes y collares en plata 950, diseños únicos en joyeria artesanal, aplicaciones de piedras y acabados envejecido' },
+  { id: 4, src: collar4, alt: 'Collar 4', title: 'Dije con ojo de gato', description: 'Dijes y collares en plata 950, diseños únicos en joyeria artesanal, aplicaciones de piedras y acabados envejecido' },
+  { id: 5, src: collar5, alt: 'Collar 5', title: 'Sol en alambrismo', description: 'Dijes y collares en plata 950, diseños únicos en joyeria artesanal, aplicaciones de piedras y acabados envejecido' },
+  { id: 6, src: collar6, alt: 'Collar 6', title: 'Dije cuarzo crital', description: 'Dijes y collares en plata 950, diseños únicos en joyeria artesanal, aplicaciones de piedras y acabados envejecido' },
 
 ];
 

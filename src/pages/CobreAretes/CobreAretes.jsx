@@ -8,9 +8,9 @@ import arete3 from '../../assets/images/cobre-aretes/arete3.jpg';
 
 
 const aretesData = [
-  { id: 1, src: arete1, alt: 'Anillo con cuarzo rojo', title: '001', description: 'A pedido' },
-  { id: 2, src: arete2, alt: 'Anillo con amatista', title: '002', description: 'A pedido' },
-  { id: 3, src: arete3, alt: 'Anillo con coral', title: '003', description: 'A pedido' },
+  { id: 1, src: arete1, alt: 'A', title: 'Aretes étnicos bronce', description: 'Aretes estilo ansestral hecho con cobre y bronce , tambien con aplicaciones de alpaca y cuarzos ó nacar, acabado envejecido' },
+  { id: 2, src: arete2, alt: 'A', title: 'Aretes étnicos cuarzo', description: 'Aretes estilo ansestral hecho con cobre y bronce , tambien con aplicaciones de alpaca y cuarzos ó nacar, acabado envejecido' },
+  { id: 3, src: arete3, alt: 'A', title: 'Aretes étnicos nácar', description: 'Aretes estilo ansestral hecho con cobre y bronce , tambien con aplicaciones de alpaca y cuarzos ó nacar, acabado envejecido' },
  
 
 ];

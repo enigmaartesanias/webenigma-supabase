@@ -20,22 +20,22 @@ import pulsera16 from '../../assets/images/plata-pulseras/pulsera16.jpg';
 
 
 const pulserasData = [
-  { id: 1, src: pulsera1, alt: 'Pulsera 1', title: 'Colibrí tejida', description: 'A pedido' },
-  { id: 2, src: pulsera2, alt: 'Pulsera 2', title: 'Nacar con perlas de río', description: 'A pedido' },
-  { id: 3, src: pulsera3, alt: 'Pulsera 3', title: 'Crisocola tejida', description: 'A pedido' },
-  { id: 4, src: pulsera4, alt: 'Pulsera 4', title: 'Spondylus tejida', description: 'A pedido' },
-  { id: 5, src: pulsera5, alt: 'Pulsera 5', title: 'Spondylus con hilo encerado', description: 'A pedido' },
-  { id: 6, src: pulsera6, alt: 'Pulsera 6', title: 'Onix con hilo encerado', description: 'A pedido' },
-  { id: 7, src: pulsera7, alt: 'Pulsera 7', title: 'Lapislázuli grap', description: 'A pedido' },
-  { id: 8, src: pulsera8, alt: 'Pulsera 8', title: 'Crisocola grap', description: 'A pedido' },
-  { id: 9, src: pulsera9, alt: 'Pulsera 9', title: 'Personalizada', description: 'A pedido' },
-  { id: 10, src: pulsera10, alt: 'Pulsera 10', title: 'Aldea de la hoja', description: 'A pedido' },
-  { id: 11, src: pulsera11, alt: 'Pulsera 11', title: 'Ojo de gato azul y cuero', description: 'A pedido' },
-  { id: 12, src: pulsera12, alt: 'Pulsera 12', title: 'Amazonita con aros', description: 'A pedido' },
-  { id: 13, src: pulsera13, alt: 'Pulsera 13', title: 'Cuarzo cristal envejecido', description: 'A pedido' },
-  { id: 14, src: pulsera14, alt: 'Pulsera 14', title: 'Placa en cuero', description: 'A pedido' },
-  { id: 15, src: pulsera15, alt: 'Pulsera 15', title: 'Onix tejida hilo encerado', description: 'A pedido' },
-  { id: 16, src: pulsera16, alt: 'Pulsera 16', title: 'Spondylus tejido con hilo encerado', description: 'A pedido' },
+  { id: 1, src: pulsera1, alt: 'Pulsera 1', title: 'Colibrí tejida', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 2, src: pulsera2, alt: 'Pulsera 2', title: 'Nacar con perlas de río', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 3, src: pulsera3, alt: 'Pulsera 3', title: 'Crisocola tejida', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 4, src: pulsera4, alt: 'Pulsera 4', title: 'Spondylus tejida', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 5, src: pulsera5, alt: 'Pulsera 5', title: 'Spondylus con hilo encerado', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 6, src: pulsera6, alt: 'Pulsera 6', title: 'Onix con hilo encerado', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 7, src: pulsera7, alt: 'Pulsera 7', title: 'Lapislázuli grap', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 8, src: pulsera8, alt: 'Pulsera 8', title: 'Crisocola grap', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 9, src: pulsera9, alt: 'Pulsera 9', title: 'Personalizada', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 10, src: pulsera10, alt: 'Pulsera 10', title: 'Aldea de la hoja', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 11, src: pulsera11, alt: 'Pulsera 11', title: 'Ojo de gato azul y cuero', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 12, src: pulsera12, alt: 'Pulsera 12', title: 'Amazonita con aros', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 13, src: pulsera13, alt: 'Pulsera 13', title: 'Cuarzo cristal envejecido', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 14, src: pulsera14, alt: 'Pulsera 14', title: 'Placa en cuero', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 15, src: pulsera15, alt: 'Pulsera 15', title: 'Onix tejida hilo encerado', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
+  { id: 16, src: pulsera16, alt: 'Pulsera 16', title: 'Spondylus tejido con hilo encerado', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
  
 ];
 

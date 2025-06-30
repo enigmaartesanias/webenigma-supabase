@@ -16,18 +16,18 @@ import collar12 from '../../assets/images/alpaca-collares/collar12.jpg';
 
 
 const collaresData = [
-  { id: 1, src: collar1, alt: 'Anillo con cuarzo rojo', title: '001', description: 'A pedido' },
-  { id: 2, src: collar2, alt: 'Anillo con amatista', title: '002', description: 'A pedido' },
-  { id: 3, src: collar3, alt: 'Anillo con coral', title: '003', description: 'A pedido' },
-  { id: 4, src: collar4, alt: 'Anillo con piedra turquesa', title: '004', description: 'A pedido' },
-  { id: 5, src: collar5, alt: 'Anillo de diseño tribal', title: '005', description: 'A pedido' },
-  { id: 6, src: collar6, alt: 'Anillo con piedra verde', title: '006', description: 'A pedido' },
-  { id: 7, src: collar7, alt: 'Anillo con piedra verde', title: '007', description: 'A pedido' },
-  { id: 8, src: collar8, alt: 'Anillo con piedra verde', title: '008', description: 'A pedido' },
-  { id: 9, src: collar9, alt: 'Anillo con piedra verde', title: '010', description: 'A pedido' },
-  { id: 10, src: collar10, alt: 'Anillo con piedra verde', title: '011', description: 'A pedido' },
-  { id: 11, src: collar11, alt: 'Anillo con piedra verde', title: '012', description: 'A pedido' },
-  { id: 12, src: collar12, alt: 'Anillo con piedra verde', title: '013', description: 'A pedido' },
+  { id: 1, src: collar1, alt: 'c', title: 'Juego de sol/luna con resina', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 2, src: collar2, alt: 'c', title: 'Dije en alambrismo con turquesa reconstituida', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 3, src: collar3, alt: 'l', title: 'Dije amatista natural', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 4, src: collar4, alt: 'a', title: 'Sol con cuarzo tejido', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 5, src: collar5, alt: 'l', title: 'Sol con crisocolas', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 6, src: collar6, alt: 'e', title: 'Cruz en alambrismo', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 7, src: collar7, alt: 'o', title: 'Dije y cadena en alambrismo', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 8, src: collar8, alt: 'o', title: 'Corono y piedra para la frente', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 9, src: collar9, alt: 'A', title: 'Dije en alambrismo con tejido', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 10, src: collar10, alt: 'A', title: 'Sol tejido con ávalon', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 11, src: collar11, alt: 'e', title: 'Sol tejido con spondylus', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 12, src: collar12, alt: 'A', title: 'Cruz en alambrismo3', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
   
 
 ];
@@ -61,7 +61,6 @@ const AlpacaCollares = () => {
             Decoramos cada pieza con piedras naturales, cuarzos, nácar y spondylus cuidadosamente seleccionados.
             La alpaca, con su brillo elegante y resistencia, es ideal para estos diseños únicos.
           
-
 
           </p>
            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
