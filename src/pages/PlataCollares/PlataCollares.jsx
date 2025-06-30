@@ -46,31 +46,29 @@ const PlataCollares = () => {
           Collares y dijes en plata 950, forjados a mano con técnicas ancestrales de orfebrería artesanal.
             Cada diseño es irrepetible, con estructuras en alambrismo que abrazan piedras únicas.
             Incorporamos cuarzos, spondylus, nácar y elementos naturales que aportan simbolismo y color.
-            Algunos dijes poseen acabados envejecidos que revelan una belleza atemporal.
-            La plata resalta como un hilo conductor de energía y sofisticación.
-            Inspirados en lo espiritual y lo natural, cada pieza guarda un mensaje.
-            Son amuletos modernos, cargados de historia y elegancia artesanal.
+        
+          
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {collaresData.map((collar, idx) => (
-              <div
-                key={collar.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(collar, idx)}
-              >
-                <img
-                  src={collar.src}
-                  alt={collar.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{collar.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{collar.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {collaresData.map((collar, idx) => (
+    <div
+      key={collar.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(collar, idx)}
+    >
+      <img
+        src={collar.src}
+        alt={collar.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{collar.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </main>
       {modalOpen && selectedImage && (

@@ -18,7 +18,8 @@ import CobreCollares from './pages/CobreCollares/CobreCollares';
 import SobreMi from './pages/SobreMi/SobreMi';
 import Contacto from './pages/Contacto/Contacto';
 import Personalizado from './pages/Personalizado/Personalizado';
-
+import PoliticasEnvios from './pages/PoliticasEnvios/PoliticasEnvios';
+import ShippingPolicies from './pages/ShippingPolicies/ShippingPolicies';
 
 
 const App = () => {
@@ -42,6 +43,8 @@ const App = () => {
         <Route path="/cobrearetes" element={<CobreAretes />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/personalizado" element={<Personalizado />} />
+        <Route path="/politicasenvios" element={<PoliticasEnvios />} />
+        <Route path="/shippingpolicies" element={<ShippingPolicies />} />
       </Routes>
       <Footer />
     </Router>

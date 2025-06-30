@@ -67,30 +67,29 @@ const PlataPulseras = () => {
             Cada pieza es única, con detalles en alambrismo que aportan estructura y movimiento.
             Las piedras naturales, cuarzos y spondylus otorgan color, energía y textura a cada diseño.
             Algunas tienen un acabado envejecido que realza su esencia orgánica y atemporal.
-            Son creaciones pensadas para realzar tu estilo con elegancia y autenticidad.
-            Inspiradas en formas naturales y patrones culturales, llevan una huella artística.
-            Hechas completamente a mano, con el alma puesta en cada curva y detalle.
+            
+          
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {pulserasData.map((pulsera, idx) => (
-              <div
-                key={pulsera.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(pulsera, idx)}
-              >
-                <img
-                  src={pulsera.src}
-                  alt={pulsera.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{pulsera.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{pulsera.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {pulserasData.map((pulsera, idx) => (
+    <div
+      key={pulsera.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(pulsera, idx)}
+    >
+      <img
+        src={pulsera.src}
+        alt={pulsera.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{pulsera.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </main>
       {modalOpen && selectedImage && (

@@ -61,29 +61,27 @@ const AlpacaAnillos = () => {
             Usamos piedras naturales, cuarzos, nácar y spondylus que aportan carácter y color.
             Algunos diseños incluyen acabados envejecidos que resaltan su esencia artesanal.
             La alpaca refleja una luz cálida que resalta la elegancia del diseño.
-            Son piezas exclusivas, con formas únicas y llenas de intención.
-            Joyas resistentes, con historia y alma, creadas para perdurar.
+            
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {anillosData.map((anillo, idx) => (
-              <div
-                key={anillo.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(anillo, idx)}
-              >
-                <img
-                  src={anillo.src}
-                  alt={anillo.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{anillo.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{anillo.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {anillosData.map((anillo, idx) => (
+    <div
+      key={anillo.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(anillo, idx)}
+    >
+      <img
+        src={anillo.src}
+        alt={anillo.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{anillo.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </main>
       {/* Modal para ampliación de imagen */}

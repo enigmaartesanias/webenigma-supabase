@@ -60,30 +60,28 @@ const AlpacaPulseras = () => {
             Combinamos soldadura y alambrismo para lograr estructuras sólidas y artísticas.
             Incorporamos piedras naturales, cuarzos, nácar y spondylus en composiciones únicas.
             El acabado envejecido en algunas piezas les da un aire atemporal y auténtico.
-            Cada pulsera es un diseño original, con fuerza visual y equilibrio.
-            La alpaca, con su brillo elegante, destaca la belleza de cada material.
-            Son joyas hechas con dedicación, pensadas para acompañarte con estilo.
+          
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {pulserasData.map((pulsera, idx) => (
-              <div
-                key={pulsera.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(pulsera, idx)}
-              >
-                <img
-                  src={pulsera.src}
-                  alt={pulsera.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{pulsera.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{pulsera.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {pulserasData.map((pulsera, idx) => (
+    <div
+      key={pulsera.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(pulsera, idx)}
+    >
+      <img
+        src={pulsera.src}
+        alt={pulsera.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{pulsera.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </main>
       {/* Modal para ampliación de imagen */}

@@ -46,33 +46,31 @@ const Personalizado = () => {
             Diseñamos dijes, pulseras y anillos únicos en plata, cobre y alpaca.
             Cada pieza puede personalizarse con nombres, fechas o iniciales.
             Usamos piedras naturales, cuero tejido y resinas con acabados artesanales.
-            Son joyas con historia, hechas a mano y con dedicación.
-            Ideales para regalar a esa persona especial, en pareja o entre amigos.
-            Fusionamos técnicas tradicionales con detalles modernos y simbólicos.
-            Porque una joya personalizada dice más que mil palabras.
+            Son joyas con historia, ideales para regalar a esa persona especial, en pareja o entre amigos.
+           
 
 
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {personalizadosData.map((personalizado, idx) => (
-              <div
-                key={personalizado.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(personalizado, idx)}
-              >
-                <img
-                  src={personalizado.src}
-                  alt={personalizado.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{personalizado.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{personalizado.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+   <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {personalizadosData.map((personalizado, idx) => (
+    <div
+      key={ personalizado.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(personalizado, idx)}
+    >
+      <img
+        src={ personalizado.src}
+        alt={ personalizado.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{ personalizado.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </main>
       {/* Modal para ampliación de imagen */}

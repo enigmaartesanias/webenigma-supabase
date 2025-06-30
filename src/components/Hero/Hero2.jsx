@@ -22,7 +22,7 @@ const Hero2 = () => {
               Andru Donalds y el Arte de Enigma
             </h2>
             <p className="text-left text-m md:text-lg sm:text-lg text-gray-700 mb-6 leading-relaxed">
-              Una colaboración que une música y orfebrería. Andru Donalds, voz principal de Enigma, luce nuestras joyas hechas a mano: anillos con piedras naturales, cuarzos y un dije único que refleja estilo, fuerza y esencia artesanal.
+              Una colaboración que une música y orfebrería. Andru Donalds, solista y voz principal de Enigma (proyecto musical - M.Cretu), luce nuestras joyas hechas a mano: anillos con piedras naturales, cuarzos y un dije único que refleja estilo, fuerza y esencia artesanal.
 Fotografía: Emillio Gaziyants
             </p>
 

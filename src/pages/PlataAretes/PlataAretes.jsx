@@ -55,31 +55,29 @@ const PlataAretes = () => {
            Aretes exclusivos hechos a mano en plata 950, con técnicas de orfebrería y diseño contemporáneo.
             La combinación de alambrismo fino y acabados envejecidos les otorga identidad única.
             Trabajamos con piedras naturales, cuarzos, nácar y spondylus en composiciones armoniosas.
-            Cada par está diseñado para resaltar la elegancia y personalidad de quien los lleva.
-            La plata se convierte en líneas suaves y texturas que capturan la luz con sutileza.
-            Inspirados en lo sagrado y lo cotidiano, conectan tradición y estilo.
-            Joyas livianas, versátiles y llenas de intención, forjadas con manos expertas.
+            
+      
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {aretesData.map((arete, idx) => (
-              <div
-                key={arete.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(arete, idx)}
-              >
-                <img
-                  src={arete.src}
-                  alt={arete.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{arete.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{arete.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {aretesData.map((arete, idx) => (
+    <div
+      key={arete.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(arete, idx)}
+    >
+      <img
+        src={arete.src}
+        alt={arete.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{arete.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </main>
       {/* Modal para ampliación de imagen */}

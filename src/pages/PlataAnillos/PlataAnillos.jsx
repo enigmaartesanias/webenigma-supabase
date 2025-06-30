@@ -23,33 +23,38 @@ import anillo19 from '../../assets/images/plata-anillos/anillo19.jpg';
 import anillo20 from '../../assets/images/plata-anillos/anillo20.jpg';
 import anillo21 from '../../assets/images/plata-anillos/anillo21.jpg';
 import anillo22 from '../../assets/images/plata-anillos/anillo22.jpg';
+import anillo23 from '../../assets/images/plata-anillos/anillo23.jpg';
+import anillo24 from '../../assets/images/plata-anillos/anillo24.jpg';
+
 
 
 
 
 const anillosData = [
-  { id: 1, src: anillo1, alt: 'Anillo', title: 'Anillo bonsai', description: 'A pedido' },
-  { id: 2, src: anillo2, alt: 'Anillo', title: 'Anillo amatista facetada', description: 'A pedido' },
-  { id: 3, src: anillo3, alt: 'Anillo', title: 'Anillo con spondylus', description: 'A pedido' },
-  { id: 4, src: anillo4, alt: 'Anillo', title: 'Anillo con crisocola', description: 'A pedido' },
-  { id: 5, src: anillo5, alt: 'Anillo', title: 'Anillo abalon marino', description: 'A pedido' },
-  { id: 6, src: anillo6, alt: 'Anillo', title: 'Anillo estilo serpiente', description: 'A pedido' },
-  { id: 7, src: anillo7, alt: 'Anillo', title: 'Anillo abalon', description: 'A pedido' },
-  { id: 8, src: anillo8, alt: 'Anillo', title: 'Anillo amatista drusa', description: 'A pedido' },
-  { id: 9, src: anillo9, alt: 'Anillo', title: 'Anillo onix', description: 'A pedido' },
-  { id: 10, src: anillo10, alt: 'Anillo', title: 'Anillo labradorita', description: 'A pedido' },
-  { id: 11, src: anillo11, alt: 'Anillo', title: 'Anillo labradorita', description: 'A pedido' },
-  { id: 12, src: anillo12, alt: 'Anillo', title: 'Anillo crisocola', description: 'A pedido' },
-  { id: 13, src: anillo13, alt: 'Anillo', title: 'Anillo trenzado', description: 'A pedido' },
-  { id: 14, src: anillo14, alt: 'Anillo', title: 'Anillo ópalo', description: 'A pedido' },
-  { id: 15, src: anillo15, alt: 'Anillo', title: 'Anillo martillado', description: 'A pedido' },
-  { id: 16, src: anillo16, alt: 'Anillo', title: 'Anillo amatista', description: 'A pedido' },
-  { id: 17, src: anillo17, alt: 'Anillo', title: 'Anillo onix', description: 'A pedido' },
-  { id: 18, src: anillo18, alt: 'Anillo', title: 'Anillo celtico', description: 'A pedido' },
-  { id: 19, src: anillo19, alt: 'Anillo', title: 'Anillo amazonita', description: 'A pedido' },
-  { id: 20, src: anillo20, alt: 'Anillo', title: 'Anillo turquesa', description: 'A pedido' },
-  { id: 21, src: anillo21, alt: 'Anillo', title: 'Anillo turquesa reconstituida', description: 'A pedido' },
-  { id: 22, src: anillo22, alt: 'Anillo', title: 'Anillo ojo de tigre', description: 'A pedido' },
+  { id: 1, src: anillo1, alt: 'Anillo', title: 'Flor de spondylus con pétalos', description: 'Anillo con spondylus morado en forma de flor y pétalos.' },
+  { id: 2, src: anillo2, alt: 'Anillo', title: 'Labradorita con cuarzo', description: 'Anillo engastado con piedra labradorita y un pequeño cuarzo cristal adornado con detalles de alambrismo.' },
+  { id: 3, src: anillo3, alt: 'Anillo', title: 'Modelos toque envejecido', description: 'Labradorita azul, turmalina negra y spondylus, envueltos en plata con un toque envejecido.' },
+  { id: 4, src: anillo4, alt: 'Anillo', title: 'Con piedra crisocola en gota', description: 'Anillo con turquesa crisocola en forma de gota , de piedra grande' },
+  { id: 5, src: anillo5, alt: 'Anillo', title: 'Estilo cinturón con nácar', description: 'Anillo con nacar cabujón y aro con orificios circulares' },
+  { id: 6, src: anillo6, alt: 'Anillo', title: 'Anillo pirita', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 7, src: anillo7, alt: 'Anillo', title: 'Anillo con ágatas', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 8, src: anillo8, alt: 'Anillo', title: 'Anillo con labradorita', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 9, src: anillo9, alt: 'Anillo', title: 'Anillo onix', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 10, src: anillo10, alt: 'Anillo', title: 'Anillo labradorita', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 11, src: anillo11, alt: 'Anillo', title: 'Anillo crisocola y labradorita', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 12, src: anillo12, alt: 'Anillo', title: 'Anillo amatista con alambrismo', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 13, src: anillo13, alt: 'Anillo', title: 'Anillo trenzado', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 14, src: anillo14, alt: 'Anillo', title: 'Anillos varios', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 15, src: anillo15, alt: 'Anillo', title: 'Anillo martillado', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 16, src: anillo16, alt: 'Anillo', title: 'Anillo doble', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 17, src: anillo17, alt: 'Anillo', title: 'Anillo onix', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 18, src: anillo18, alt: 'Anillo', title: 'Anillo celtico', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 19, src: anillo19, alt: 'Anillo', title: 'Anillo pirita', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 20, src: anillo20, alt: 'Anillo', title: 'Anillo fundido', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 21, src: anillo21, alt: 'Anillo', title: 'Anillo alambrismo', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 22, src: anillo22, alt: 'Anillo', title: 'Anillo tejido', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 22, src: anillo23, alt: 'Anillo', title: 'Anillo con resina', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 22, src: anillo24, alt: 'Anillo', title: 'Anillo turmalina', description: 'Anillos de plata regulables con acabado envejecido ' },
 
 ];
 
@@ -80,30 +85,28 @@ const PlataAnillos = () => {
            Anillos únicos en plata 950, trabajados a mano con técnicas de joyería artesanal tipo orfebrería.
             Cada diseño es exclusivo, fusionando el arte del alambrismo con acabados envejecidos que evocan lo ancestral.
             Utilizamos piedras naturales, cuarzos, nácar y spondylus para realzar su carácter místico.
-            La plata se transforma en formas elegantes que transmiten fuerza y delicadeza.
-            Inspirados en lo simbólico y lo eterno, cada pieza tiene su propia historia.
-            Joyas que combinan tradición y creatividad, hechas con pasión y precisión.
+            
+            
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {anillosData.map((anillo, idx) => (
-              <div
-                key={anillo.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(anillo, idx)}
-              >
-                <img
-                  src={anillo.src}
-                  alt={anillo.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{anillo.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{anillo.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+          {anillosData.map((anillo, idx) => (
+          <div
+          key={anillo.id}
+           className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+           onClick={() => openModal(anillo, idx)}
+          >
+         <img
+        src={anillo.src}
+        alt={anillo.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+          />
+           {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+           <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+             <h3 className="text-base font-normal text-gray-800">{anillo.title}</h3>
+           </div>
+         </div>
+         ))}
+        </div>
         </div>
       </main>
       {/* Modal para ampliación de imagen */}

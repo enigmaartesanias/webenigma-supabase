@@ -24,10 +24,32 @@ const Footer = () => {
           </div>
 
           {/* Columna 3: Formas de pago */}
-          <div className="md:border-r md:border-gray-700 md:pr-8"> {/* Línea divisoria derecha */}
-            <h3 className="text-lg font-semibold mb-4">Formas de pago</h3>
+          <div className="md:border-r md:border-gray-700 md:pr-8">
+            <h3 className="text-lg font-semibold mb-4">Formas de pago y envío</h3>
             <p className="text-sm text-gray-400">Visa - Western union - Plin - Yape</p>
-            <p className="text-sm text-gray-400">Transferencia</p>
+            
+            {/* Enlace a Políticas de envío y tarifas */}
+            <div className="mt-4 text-xs text-gray-400 flex items-center justify-center space-x-1">
+              <a
+                href="/politicasenvios"
+                className="underline hover:text-white flex items-center"
+                title="Ver políticas de envío y tarifas"
+              >
+                <span role="img" aria-label="envío">📦</span> Políticas de envío y tarifas
+              </a>
+            </div>
+          
+
+          {/* Enlace a Políticas de envío y tarifas */}
+            <div className="mt-4 text-xs text-gray-400 flex items-center justify-center space-x-1">
+              <a
+                href="/shippingpolicies"
+                className="underline hover:text-white flex items-center"
+                title="Ver políticas de envío y tarifas"
+              >
+                <span role="img" aria-label="envío">📦</span> Shipping Policies and Rates
+              </a>
+            </div>
           </div>
 
           {/* Columna 4: Redes Sociales */}
@@ -44,6 +66,31 @@ const Footer = () => {
                 <FaWhatsapp size={24} />
               </a>
         </div>
+
+{/* Texto sutil para compartir página */}
+        <div className="mt-4 text-xs text-gray-400 flex items-center justify-center space-x-1">
+          <button
+            className="underline hover:text-white flex items-center bg-transparent p-0 border-0"
+            onClick={() => {
+              if (navigator.share) {
+                navigator.share({
+                  title: document.title,
+                  url: window.location.href,
+                });
+              } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('¡Enlace copiado!');
+              }
+            }}
+            title="Compartir esta página"
+            type="button"
+          >
+            <span role="img" aria-label="compartir">🔗</span> Compartir página
+          </button>
+        </div>
+
+
+
         </div>
         </div>
 

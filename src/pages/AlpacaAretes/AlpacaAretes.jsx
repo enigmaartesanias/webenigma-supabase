@@ -42,31 +42,29 @@ const AlpacaAretes = () => {
            Aretes elaborados artesanalmente en alpaca, un material noble y luminoso de gran durabilidad.
             Su estructura une el arte de la soldadura con la delicadeza del alambrismo.
             Utilizamos piedras naturales, cuarzos, nácar y spondylus en diseños ligeros y únicos.
-            Algunos tienen acabado envejecido, dando un toque rústico y sofisticado.
-            El brillo de la alpaca realza cada detalle con un encanto propio.
-            Cada par es irrepetible, pensado para expresar personalidad y autenticidad.
-            Joyas con esencia artesanal, hechas a mano con pasión y estilo.
+           
+      
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {aretesData.map((arete, idx) => (
-              <div
-                key={arete.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(arete, idx)}
-              >
-                <img
-                  src={arete.src}
-                  alt={arete.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{arete.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{arete.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {aretesData.map((arete, idx) => (
+    <div
+      key={arete.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(arete, idx)}
+    >
+      <img
+        src={arete.src}
+        alt={arete.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{arete.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </main>
       {/* Modal para ampliación de imagen */}

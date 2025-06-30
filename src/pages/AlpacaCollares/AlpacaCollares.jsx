@@ -60,32 +60,30 @@ const AlpacaCollares = () => {
             Unimos soldadura y alambrismo en composiciones que abrazan la forma y el detalle.
             Decoramos cada pieza con piedras naturales, cuarzos, nácar y spondylus cuidadosamente seleccionados.
             La alpaca, con su brillo elegante y resistencia, es ideal para estos diseños únicos.
-            Muchos llevan un acabado envejecido que resalta su carácter ancestral y místico.
-            Son colgantes con alma, nacidos de la inspiración y el trabajo artesanal.
-            Joyas distintas, duraderas y cargadas de simbolismo, para quienes valoran lo auténtico.
+          
 
 
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {collaresData.map((collar, idx) => (
-              <div
-                key={collar.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(collar, idx)}
-              >
-                <img
-                  src={collar.src}
-                  alt={collar.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{collar.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{collar.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {collaresData.map((collar, idx) => (
+    <div
+      key={collar.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(collar, idx)}
+    >
+      <img
+        src={collar.src}
+        alt={collar.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{collar.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </main>
       {/* Modal para ampliación de imagen */}

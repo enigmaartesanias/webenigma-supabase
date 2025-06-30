@@ -53,32 +53,27 @@ const CobreAnillos = () => {
             Gracias a su maleabilidad, logramos diseños orgánicos y formas únicas hechas completamente a mano.
             Cada anillo combina técnicas de soldadura y alambrismo para lograr piezas sólidas y detalladas.
             Incorporamos piedras naturales, cuarzos, resinas y spondylus que aportan color y textura.
-            El acabado envejecido realza su carácter rústico y su belleza atemporal.
-            Son joyas con personalidad, pensadas para quienes buscan estilo auténtico.
-            Diseños únicos que unen lo ancestral con la creatividad moderna.
-
-
+           
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-            {anillosData.map((anillo, idx) => (
-              <div
-                key={anillo.id}
-                className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                onClick={() => openModal(anillo, idx)}
-              >
-                <img
-                  src={anillo.src}
-                  alt={anillo.alt}
-                  className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center">
-                  <h3 className="text-md font-medium">{anillo.title}</h3>
-                  <p className="hidden text-sm text-gray-200">{anillo.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 gap-y-4 mb-6">
+  {anillosData.map((anillo, idx) => (
+    <div
+      key={anillo.id}
+      className="group relative cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      onClick={() => openModal(anillo, idx)}
+    >
+      <img
+        src={anillo.src}
+        alt={anillo.alt}
+        className="w-full h-48 md:h-64 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+      />
+      {/* Título debajo de la imagen, no bold, con sombra y fondo blanco */}
+      <div className="bg-white shadow-md rounded-b-lg px-2 py-2 text-center">
+        <h3 className="text-base font-normal text-gray-800">{anillo.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </main>
       {/* Modal para ampliación de imagen */}

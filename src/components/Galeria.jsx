@@ -39,7 +39,7 @@ const Galeria = () => {
   return (
     <div className="max-w-7xl mx-auto px-3 py-4 sm:py-8 sm:px-6 lg:px-8 font-sans">
       <h4 className="text-2xl text-gray-800 text-center mb-4 sm:mb-8 sm:text-5xl lg:text-4xl tracking-tight">
-        Explora Nuestras Joyas
+        Explora Nuestra Joyeria Artesanal
       </h4>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-10">
         {images.map((img, index) => (

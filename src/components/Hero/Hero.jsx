@@ -18,7 +18,7 @@ const Hero = () => {
 
   return (
     <section
-  className="relative w-full top-0 min-h-[700px] md:min-h-[900px] lg:min-h-[1100px] flex flex-col items-center justify-center bg-red-300 pt-60"
+  className="relative w-full top-0 min-h-[700px] md:min-h-[900px] lg:min-h-[1100px] flex flex-col items-center justify-center bg-white-300 pt-60"
 >
       <div className="absolute inset-0 w-full h-full">
         {images.map((image, index) => (
@@ -29,6 +29,14 @@ const Hero = () => {
             className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 object-cover ${
               index === currentImage ? "opacity-100" : "opacity-0"
             }`}
+            
+            style={{
+              filter: "sepia(0.3)",
+              opacity: index === currentImage ? 1 : 0,
+              transition: "opacity 1s"
+            }}
+
+
           />
         ))}
       </div>

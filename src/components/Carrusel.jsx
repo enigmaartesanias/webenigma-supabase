@@ -28,7 +28,7 @@ const CarruselAlternativo = () => {
     ]
   };
   return (
-    <div className="w-full py-7 bg-gray-200" style={{ overscrollBehavior: 'contain', touchAction: 'pan-y' }}>
+    <div className="w-full py-7 bg-beige-100" style={{ overscrollBehavior: 'contain', touchAction: 'pan-y' }}>
  
       <div className="container mx-auto px-10 max-w-7xl"> {/* Por ejemplo, max-w-4xl */}
         <h2 className="text-2xl font-normal md:text-1xl lg:text-3xl text-gray-800 text-center mb-4">
@@ -37,7 +37,7 @@ const CarruselAlternativo = () => {
         <Slider {...settings}>
           <div>
             <img src="/images/img1.jpg" alt="Producto 1" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
-            <p className="mt-2 text-gray-700 text-center">Pulsera de alpaca</p>
+            <p className="mt-2 text-gray-700 text-center">Collar Alpaca</p>
           </div>
           <div>
             <img src="/images/img2.jpg" alt="Producto 2" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
@@ -48,8 +48,12 @@ const CarruselAlternativo = () => {
             <p className="mt-2 text-gray-700 text-center">Anillo coral</p>
           </div>
           <div>
-            <img src="/images/img4.jpg" alt="Producto 3" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
+            <img src="/images/img4.jpg" alt="Producto 4" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
             <p className="mt-2 text-gray-700 text-center">Dije en alpaca</p>
+          </div>
+          <div>
+            <img src="/images/img5.jpg" alt="Producto 5" className="w-full h-46 lg:h-65 object-cover rounded-lg" />
+            <p className="mt-2 text-gray-700 text-center">Pulsera de alpaca</p>
           </div>
 
 
