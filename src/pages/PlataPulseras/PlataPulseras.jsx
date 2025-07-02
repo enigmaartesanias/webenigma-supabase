@@ -17,6 +17,7 @@ import pulsera13 from '../../assets/images/plata-pulseras/pulsera13.jpg';
 import pulsera14 from '../../assets/images/plata-pulseras/pulsera14.jpg';
 import pulsera15 from '../../assets/images/plata-pulseras/pulsera15.jpg';
 import pulsera16 from '../../assets/images/plata-pulseras/pulsera16.jpg';
+import pulsera17 from '../../assets/images/plata-pulseras/pulsera17.jpg';
 
 
 const pulserasData = [
@@ -36,7 +37,7 @@ const pulserasData = [
   { id: 14, src: pulsera14, alt: 'Pulsera 14', title: 'Placa en cuero', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
   { id: 15, src: pulsera15, alt: 'Pulsera 15', title: 'Onix tejida hilo encerado', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
   { id: 16, src: pulsera16, alt: 'Pulsera 16', title: 'Spondylus tejido con hilo encerado', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
- 
+  { id: 17, src: pulsera17, alt: 'Pulsera 17', title: 'Modelo placa con ágatas', description: 'Pulseras de plata 950, una combinación de tejidos y acabado envejecido, modelos originales' },
 ];
 
 const PlataPulseras = () => {

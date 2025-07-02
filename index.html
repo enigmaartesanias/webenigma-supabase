@@ -9,5 +9,26 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Seleccionamos todos los enlaces de la página
+        const allLinks = document.querySelectorAll('a');
+
+        // Iteramos sobre cada enlace
+        allLinks.forEach(link => {
+            // Añadimos un escuchador de eventos 'click' a cada enlace
+            link.addEventListener('click', function(event) {
+                // Desplazamos la ventana a la parte superior de la página
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Opcional: para un desplazamiento suave
+                });
+            });
+        });
+    });
+    </script>
+
+
   </body>
 </html>

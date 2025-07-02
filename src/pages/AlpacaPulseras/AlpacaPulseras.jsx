@@ -12,6 +12,17 @@ import pulsera8 from '../../assets/images/alpaca-pulseras/pulsera8.jpg';
 import pulsera9 from '../../assets/images/alpaca-pulseras/pulsera9.jpg';
 import pulsera10 from '../../assets/images/alpaca-pulseras/pulsera10.jpg';
 import pulsera11 from '../../assets/images/alpaca-pulseras/pulsera11.jpg';
+import pulsera12 from '../../assets/images/alpaca-pulseras/pulsera12.jpg';
+import pulsera13 from '../../assets/images/alpaca-pulseras/pulsera13.jpg';
+import pulsera14 from '../../assets/images/alpaca-pulseras/pulsera14.jpg';
+import pulsera15 from '../../assets/images/alpaca-pulseras/pulsera15.jpg';
+import pulsera16 from '../../assets/images/alpaca-pulseras/pulsera16.jpg';
+import pulsera17 from '../../assets/images/alpaca-pulseras/pulsera17.jpg';
+import pulsera18 from '../../assets/images/alpaca-pulseras/pulsera18.jpg';
+import pulsera19 from '../../assets/images/alpaca-pulseras/pulsera19.jpg';
+import pulsera20 from '../../assets/images/alpaca-pulseras/pulsera20.jpg';
+import pulsera21 from '../../assets/images/alpaca-pulseras/pulsera21.jpg';
+
 
 
 
@@ -27,7 +38,17 @@ const pulserasData = [
   { id: 9, src: pulsera9, alt: 'Anillo', title: 'Amatista martillado', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
   { id: 10, src: pulsera10, alt: 'Anillo', title: 'Trenzado envejecido', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
   { id: 11, src: pulsera11, alt: 'Anillo', title: 'Modelo astrid turquesa', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
-  
+  { id: 12, src: pulsera12, alt: 'Anillo', title: 'Modelo labradorita', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 13, src: pulsera13, alt: 'Anillo', title: 'Modelo alambrismo', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 14, src: pulsera14, alt: 'Anillo', title: 'Modelo alambrismo', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 15, src: pulsera15, alt: 'Anillo', title: 'Modelo alambrismo', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 16, src: pulsera16, alt: 'Anillo', title: 'Pulsera con anillo', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 17, src: pulsera17, alt: 'Anillo', title: 'Brazalete con piedra', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 18, src: pulsera18, alt: 'Anillo', title: 'Brazaletes con bronce', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 19, src: pulsera19, alt: 'Anillo', title: 'Modelo calado', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 20, src: pulsera20, alt: 'Anillo', title: 'Brazalete ccon cruz', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+  { id: 21, src: pulsera21, alt: 'Anillo', title: 'Brazalete hojas envejecido', description: 'Pulseras de alpaca, están soldadas y mucho alambrismo con diferentes calibres , técnicas de martillado y tejidos' },
+
 
 
 ];

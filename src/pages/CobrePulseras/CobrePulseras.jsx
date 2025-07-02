@@ -22,6 +22,8 @@ import pulsera18 from '../../assets/images/cobre-pulseras/pulsera18.jpg';
 import pulsera19 from '../../assets/images/cobre-pulseras/pulsera19.jpg';
 import pulsera20 from '../../assets/images/cobre-pulseras/pulsera20.jpg';
 import pulsera21 from '../../assets/images/cobre-pulseras/pulsera21.jpg';
+import pulsera22 from '../../assets/images/cobre-pulseras/pulsera22.jpg';
+import pulsera23 from '../../assets/images/cobre-pulseras/pulsera23.jpg';
 
 
 const pulserasData = [
@@ -46,7 +48,8 @@ const pulserasData = [
   { id: 19, src: pulsera19, alt: 'Anillo con piedra verde', title: 'Corazon personalizado', description: 'Pulsera de cobre, varias técnicas de acabados , con tejidos, martillados y otras aplicaciones, tienen acabado envejecido' },
   { id: 20, src: pulsera20, alt: 'Anillo con piedra verde', title: 'Entorchado ojo de tigre', description: 'Pulsera de cobre, varias técnicas de acabados , con tejidos, martillados y otras aplicaciones, tienen acabado envejecido' },
   { id: 21, src: pulsera21, alt: 'Anillo con piedra verde', title: 'Personalizado con flor', description: 'Pulsera de cobre, varias técnicas de acabados , con tejidos, martillados y otras aplicaciones, tienen acabado envejecido' },
-  
+  { id: 22, src: pulsera22, alt: 'Anillo con piedra verde', title: 'Brazalete con caballos', description: 'Pulsera de cobre, varias técnicas de acabados , con tejidos, martillados y otras aplicaciones, tienen acabado envejecido' },
+  { id: 23, src: pulsera23, alt: 'Anillo con piedra verde', title: 'Brazalete trenzado', description: 'Pulsera de cobre, varias técnicas de acabados , con tejidos, martillados y otras aplicaciones, tienen acabado envejecido' },
 
 ];
 

@@ -10,13 +10,13 @@ import per6 from '../../assets/images/personalizados/per6.jpg';
 import per7 from '../../assets/images/personalizados/per7.jpg';
 
 const personalizadosData = [
-  { id: 1, src: per1, alt: 'Anillo con cuarzo rojo', title: '001', description: 'A pedido' },
-  { id: 2, src: per2, alt: 'Anillo con amatista', title: '002', description: 'A pedido' },
-  { id: 3, src: per3, alt: 'Anillo con coral', title: '003', description: 'A pedido' },
-  { id: 4, src: per4, alt: 'Anillo con piedra turquesa', title: '004', description: 'A pedido' },
-  { id: 5, src: per5, alt: 'Anillo de diseño tribal', title: '005', description: 'A pedido' },
-  { id: 6, src: per6, alt: 'Anillo con piedra verde', title: '006', description: 'A pedido' },
-  { id: 7, src: per7, alt: 'Anillo con piedra verde', title: '007', description: 'A pedido' },
+  { id: 1, src: per1, alt: 'A', title: 'Dije sol y luna', description: 'Dijes personalizados de alpaca con piedras de cuarzo' },
+  { id: 2, src: per2, alt: 'A', title: 'Pulsera corazón', description: 'Pulsera con iniciales ,en cobre con bronce' },
+  { id: 3, src: per3, alt: 'A', title: 'Pulsera Tejida con nombres', description: 'Pulsera en cobre con bronce tejidas con piedras' },
+  { id: 4, src: per4, alt: 'A', title: 'Pulseras destilo brazalete', description: 'Pulsera con nombre en alpaca estilo brazalete' },
+  { id: 5, src: per5, alt: 'A', title: 'Pulsera Tejida con nombres', description: 'Pulsera en cobre con bronce tejidas con piedras' },
+  { id: 6, src: per6, alt: 'A', title: 'Pulsera corazón cobre y bronce', description: 'Pulsera con iniciales ,en cobre con bronce' },
+  { id: 7, src: per7, alt: 'A', title: 'Pulsera de cobre con flor y bronce', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
 ];
 
 const Personalizado = () => {

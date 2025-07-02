@@ -13,6 +13,9 @@ import anillo9 from '../../assets/images/alpaca-anillos/anillo9.jpg';
 import anillo10 from '../../assets/images/alpaca-anillos/anillo10.jpg';
 import anillo11 from '../../assets/images/alpaca-anillos/anillo11.jpg';
 import anillo12 from '../../assets/images/alpaca-anillos/anillo12.jpg';
+import anillo13 from '../../assets/images/alpaca-anillos/anillo13.jpg';
+import anillo14 from '../../assets/images/alpaca-anillos/anillo14.jpg';
+import anillo15 from '../../assets/images/alpaca-anillos/anillo15.jpg';
 
 
 const anillosData = [
@@ -28,6 +31,9 @@ const anillosData = [
   { id: 10, src: anillo10, alt: 'Anillo', title: 'Rojo reconstituido dos piedras', description: 'Modelo de dos piedras en gota , acabado envejecido y regulable' },
   { id: 11, src: anillo11, alt: 'Anillo', title: 'Turquesa ancha envejecida', description: 'Es como un aro , elegante y fuerte por el grosor' },
   { id: 12, src: anillo12, alt: 'Anillo', title: 'Modelo soles con ágatas', description: 'Anillos tejidos en forma de sol con ágatas' },
+  { id: 13, src: anillo13, alt: 'Anillo', title: 'Modelo coral envejecido', description: 'Anillo con piedra reconstituida color coral' },
+  { id: 14, src: anillo14, alt: 'Anillo', title: 'Modelo turquesa con resina', description: 'Anillo con piedra reconstituida color turquesa' },
+  { id: 15, src: anillo15, alt: 'Anillo', title: 'Modelo turquesa natural', description: 'Anillo con piedra turquesa con acabado envejecido' },
   
 
 ];
