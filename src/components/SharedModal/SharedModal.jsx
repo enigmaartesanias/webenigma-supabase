@@ -1,4 +1,4 @@
-import React from 'react';
+
 import iconoCompartir from '../../assets/images/compartir.png';
 
 const SharedModal = ({ isOpen, onClose, image, currentIndex, total }) => {
@@ -13,7 +13,7 @@ const SharedModal = ({ isOpen, onClose, image, currentIndex, total }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
       <div className="bg-white rounded-lg p-4 max-w-lg w-full relative">
         <button
-          className="absolute top-2 right-2 text-gray-700 text-2xl"
+          className="absolute top-2 right-2 text-gray-700 text-4xl"
           onClick={onClose}
         >
           &times;

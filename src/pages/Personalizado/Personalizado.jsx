@@ -26,14 +26,14 @@ const personalizadosData = [
   { id: 5, src: per5, alt: 'A', title: 'Pulsera Tejida con nombres', description: 'Pulsera en cobre con bronce tejidas con piedras' },
   { id: 6, src: per6, alt: 'A', title: 'Pulsera corazón cobre y bronce', description: 'Pulsera con iniciales ,en cobre con bronce' },
   { id: 7, src: per7, alt: 'A', title: 'Pulsera de cobre con flor y bronce', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
-  { id: 8, src: per8, alt: 'A', title: 'Pulsera de cobre con flor y bronce', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
-  { id: 9, src: per9, alt: 'A', title: 'Pulsera de cobre con flor y bronce', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
-  { id: 10, src: per10, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
-  { id: 11, src: per11, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
-  { id: 12, src: per12, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
-  { id: 13, src: per13, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
-  { id: 14, src: per14, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
-  { id: 15, src: per15, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
+  { id: 8, src: per8, alt: 'A', title: 'Dije con corazon personalizado', description: 'Dijes personalizados de alpaca con piedras de cuarzo' },
+  { id: 9, src: per9, alt: 'A', title: 'Pulsera de owin', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
+  { id: 10, src: per10, alt: 'A', title: 'Brazalete star', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
+  { id: 11, src: per11, alt: 'A', title: 'Personalizado con flor y cuarzos', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
+  { id: 12, src: per12, alt: 'A', title: 'Corazón partido e iniciales', description: 'Dijes personalizados de alpaca' },
+  { id: 13, src: per13, alt: 'A', title: 'Infinito con fecha e inicial', description: 'Pulsera de alpaca tejida' },
+  { id: 14, src: per14, alt: 'A', title: 'Personalizado javier', description: 'Placa con nombre y piedra volcánica' },
+  { id: 15, src: per15, alt: 'A', title: 'Personalizado con fecha', description: 'Personalizado con fecha' },
 ];
 
 const Personalizado = () => {

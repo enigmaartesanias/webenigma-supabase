@@ -13,6 +13,20 @@ import collar9 from '../../assets/images/alpaca-collares/collar9.jpg';
 import collar10 from '../../assets/images/alpaca-collares/collar10.jpg';
 import collar11 from '../../assets/images/alpaca-collares/collar11.jpg';
 import collar12 from '../../assets/images/alpaca-collares/collar12.jpg';
+import collar13 from '../../assets/images/alpaca-collares/collar13.jpg';
+import collar14 from '../../assets/images/alpaca-collares/collar14.jpg';
+import collar15 from '../../assets/images/alpaca-collares/collar15.jpg';
+import collar16 from '../../assets/images/alpaca-collares/collar16.jpg';
+import collar17 from '../../assets/images/alpaca-collares/collar17.jpg';
+import collar18 from '../../assets/images/alpaca-collares/collar18.jpg';
+import collar19 from '../../assets/images/alpaca-collares/collar19.jpg';
+import collar20 from '../../assets/images/alpaca-collares/collar20.jpg';
+import collar21 from '../../assets/images/alpaca-collares/collar21.jpg';
+import collar22 from '../../assets/images/alpaca-collares/collar22.jpg';
+import collar23 from '../../assets/images/alpaca-collares/collar23.jpg';
+import collar24 from '../../assets/images/alpaca-collares/collar24.jpg';
+
+
 
 
 const collaresData = [
@@ -27,7 +41,21 @@ const collaresData = [
   { id: 9, src: collar9, alt: 'A', title: 'Dije en alambrismo con tejido', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
   { id: 10, src: collar10, alt: 'A', title: 'Sol tejido con ávalon', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
   { id: 11, src: collar11, alt: 'e', title: 'Sol tejido con spondylus', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
-  { id: 12, src: collar12, alt: 'A', title: 'Cruz en alambrismo3', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 12, src: collar12, alt: 'A', title: 'Cruz en alambrismo', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 13, src: collar13, alt: 'A', title: 'Dije tejido y piedra turquesa', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 14, src: collar14, alt: 'A', title: 'Dijes con cuero y piedras', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 15, src: collar15, alt: 'A', title: 'Filigrana artesanal labradorita', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 16, src: collar16, alt: 'A', title: 'Soles en alambrismo con cuarzos', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 17, src: collar17, alt: 'A', title: 'Collar 3 piedras turquesas', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 18, src: collar18, alt: 'A', title: 'Sol tejido y piedra pirita', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 19, src: collar19, alt: 'A', title: 'Dijes clásicos varias piedras', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 20, src: collar20, alt: 'A', title: 'Dijes clásicos con pirita', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 21, src: collar21, alt: 'A', title: 'Dije nudo de bruja', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 22, src: collar22, alt: 'A', title: 'Dije amatista natural', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 23, src: collar23, alt: 'A', title: 'Filigrana artesanal crisocola', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  { id: 24, src: collar24, alt: 'A', title: 'Filigrana artesanal onix', description: 'Dijes y collares en alambre de alpaca , muy resiste, todos los trabajos éstan soldados y estan hechos con varias técnias de alambrismo y envejecidos' },
+  
+
   
 
 ];

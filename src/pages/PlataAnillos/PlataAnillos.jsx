@@ -25,6 +25,25 @@ import anillo21 from '../../assets/images/plata-anillos/anillo21.jpg';
 import anillo22 from '../../assets/images/plata-anillos/anillo22.jpg';
 import anillo23 from '../../assets/images/plata-anillos/anillo23.jpg';
 import anillo24 from '../../assets/images/plata-anillos/anillo24.jpg';
+import anillo25 from '../../assets/images/plata-anillos/anillo25.jpg';
+import anillo26 from '../../assets/images/plata-anillos/anillo26.jpg';
+import anillo27 from '../../assets/images/plata-anillos/anillo27.jpg';
+import anillo28 from '../../assets/images/plata-anillos/anillo28.jpg';
+import anillo29 from '../../assets/images/plata-anillos/anillo29.jpg';
+import anillo30 from '../../assets/images/plata-anillos/anillo30.jpg';
+import anillo31 from '../../assets/images/plata-anillos/anillo31.jpg';
+import anillo32 from '../../assets/images/plata-anillos/anillo32.jpg';
+import anillo33 from '../../assets/images/plata-anillos/anillo33.jpg';
+import anillo34 from '../../assets/images/plata-anillos/anillo34.jpg';
+import anillo35 from '../../assets/images/plata-anillos/anillo35.jpg';
+import anillo36 from '../../assets/images/plata-anillos/anillo36.jpg';
+import anillo37 from '../../assets/images/plata-anillos/anillo37.jpg';
+import anillo38 from '../../assets/images/plata-anillos/anillo38.jpg';
+import anillo39 from '../../assets/images/plata-anillos/anillo39.jpg';
+import anillo40 from '../../assets/images/plata-anillos/anillo40.jpg';
+import anillo41 from '../../assets/images/plata-anillos/anillo41.jpg';
+import anillo42 from '../../assets/images/plata-anillos/anillo42.jpg';
+
 
 
 
@@ -52,9 +71,28 @@ const anillosData = [
   { id: 19, src: anillo19, alt: 'Anillo', title: 'Anillo pirita', description: 'Anillos de plata regulables con acabado envejecido ' },
   { id: 20, src: anillo20, alt: 'Anillo', title: 'Anillo fundido', description: 'Anillos de plata regulables con acabado envejecido ' },
   { id: 21, src: anillo21, alt: 'Anillo', title: 'Anillo alambrismo', description: 'Anillos de plata regulables con acabado envejecido ' },
-  { id: 22, src: anillo22, alt: 'Anillo', title: 'Anillo tejido', description: 'Anillos de plata regulables con acabado envejecido ' },
-  { id: 22, src: anillo23, alt: 'Anillo', title: 'Anillo con resina', description: 'Anillos de plata regulables con acabado envejecido ' },
-  { id: 22, src: anillo24, alt: 'Anillo', title: 'Anillo turmalina', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 22, src: anillo22, alt: 'Anillo', title: 'Anillo astrid', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 23, src: anillo23, alt: 'Anillo', title: 'Anillo con resina', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 24, src: anillo24, alt: 'Anillo', title: 'Anillo turmalina', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 25, src: anillo25, alt: 'Anillo', title: 'Anillo recosituido y cuarzo', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 26, src: anillo26, alt: 'Anillo', title: 'Anillo Amatista ramas', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 27, src: anillo27, alt: 'Anillo', title: 'Anillo aguamarina', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 28, src: anillo28, alt: 'Anillo', title: 'Anillo cuarzo cristal', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 29, src: anillo29, alt: 'Anillo', title: 'Anillo spondylus', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 30, src: anillo30, alt: 'Anillo', title: 'Anillo avalon', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 31, src: anillo31, alt: 'Anillo', title: 'Árbol de la abundancia', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 32, src: anillo32, alt: 'Anillo', title: 'Amatista facetada y ramas', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 33, src: anillo33, alt: 'Anillo', title: 'Cuarzo cristal', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 34, src: anillo34, alt: 'Anillo', title: 'Anillo crisocola', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 35, src: anillo35, alt: 'Anillo', title: 'Anillo zig zag', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 36, src: anillo36, alt: 'Anillo', title: 'Con ojo de gato', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 37, src: anillo37, alt: 'Anillo', title: 'Anillo reconstituido en aro', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 38, src: anillo38, alt: 'Anillo', title: 'Anillos clásicos con piedras', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 39, src: anillo39, alt: 'Anillo', title: 'Anillo estochado', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 40, src: anillo40, alt: 'Anillo', title: 'Anillo fundido', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 41, src: anillo41, alt: 'Anillo', title: 'Anillo con ojo de tigre', description: 'Anillos de plata regulables con acabado envejecido ' },
+  { id: 42, src: anillo42, alt: 'Anillo', title: 'Anillo avalon con hojas', description: 'Anillos de plata regulables con acabado envejecido ' },
+
 
 ];
 

@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
 
 {/* Texto sutil para compartir página */}
-        <div className="mt-4 text-xs text-gray-400 flex items-center justify-center space-x-1">
+        <div className="mt-4 text-md text-gray-400 flex items-center justify-center space-x-1">
           <button
             className="underline hover:text-white flex items-center bg-transparent p-0 border-0"
             onClick={() => {

@@ -13,6 +13,8 @@ import collar9 from '../../assets/images/cobre-collares/collar9.jpg';
 import collar10 from '../../assets/images/cobre-collares/collar10.jpg';
 import collar11 from '../../assets/images/cobre-collares/collar11.jpg';
 import collar12 from '../../assets/images/cobre-collares/collar12.jpg';
+import collar13 from '../../assets/images/cobre-collares/collar13.jpg';
+import collar14 from '../../assets/images/cobre-collares/collar14.jpg';
 
 
 const collaresData = [
@@ -28,6 +30,8 @@ const collaresData = [
   { id: 10, src: collar10, alt: 'A', title: 'Dije con aplicaición de alpaca', description: 'Dijes y collares en cobre, las técnicas de acabado son el calado, martillado, soldado, alambrismo y acabado envejecido , muy resistente' },
   { id: 11, src: collar11, alt: 'A', title: 'Juego de dije y aretes con resina', description: 'Dijes y collares en cobre, las técnicas de acabado son el calado, martillado, soldado, alambrismo y acabado envejecido , muy resistente' },
   { id: 12, src: collar12, alt: 'A', title: 'Soles tejidos con cuarzos', description: 'Dijes y collares en cobre, las técnicas de acabado son el calado, martillado, soldado, alambrismo y acabado envejecido , muy resistente' },
+  { id: 13, src: collar13, alt: 'A', title: 'Soles calados y resina', description: 'Dijes y collares en cobre, las técnicas de acabado son el calado, martillado, soldado, alambrismo y acabado envejecido , muy resistente' },
+  { id: 14, src: collar14, alt: 'A', title: 'Sole tejidos con luna', description: 'Dijes y collares en cobre, las técnicas de acabado son el calado, martillado, soldado, alambrismo y acabado envejecido , muy resistente' },
   
 
 ];

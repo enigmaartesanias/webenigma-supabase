@@ -11,6 +11,8 @@ import arete7 from '../../assets/images/plata-aretes/arete7.jpg';
 import arete8 from '../../assets/images/plata-aretes/arete8.jpg';
 import arete9 from '../../assets/images/plata-aretes/arete9.jpg';
 import arete10 from '../../assets/images/plata-aretes/arete10.jpg';
+import arete11 from '../../assets/images/plata-aretes/arete11.jpg';
+import arete12 from '../../assets/images/plata-aretes/arete12.jpg';
 
 
 const aretesData = [
@@ -24,7 +26,8 @@ const aretesData = [
   { id: 8, src: arete8, alt: 'A', title: 'Argollas étnicas', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
   { id: 9, src: arete9, alt: 'A', title: 'Argollas étnicas', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
   { id: 10, src: arete10, alt: 'A', title: 'Argollas étnicas', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
-
+  { id: 11, src: arete11, alt: 'A', title: 'Trepador luna estrella', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
+  { id: 12, src: arete12, alt: 'A', title: 'Trepador hoja y piedras', description: 'Aretes en plata 950, tienen acabado envejecido con alambrismo y aplicaciones de piedras, muranos' },
 
 ];
 

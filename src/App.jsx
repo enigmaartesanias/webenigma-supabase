@@ -20,11 +20,13 @@ import Contacto from './pages/Contacto/Contacto';
 import Personalizado from './pages/Personalizado/Personalizado';
 import PoliticasEnvios from './pages/PoliticasEnvios/PoliticasEnvios';
 import ShippingPolicies from './pages/ShippingPolicies/ShippingPolicies';
-
+import ScrollToTop from './components/ScrollToTop'; // <-- Importa el componente
+import VideoShorts from './pages/VideoShorts';
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop /> {/* <-- Agrega aquí el componente */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -45,6 +47,7 @@ const App = () => {
         <Route path="/personalizado" element={<Personalizado />} />
         <Route path="/politicasenvios" element={<PoliticasEnvios />} />
         <Route path="/shippingpolicies" element={<ShippingPolicies />} />
+        <Route path="/videoshorts" element={<VideoShorts />} /> 
       </Routes>
       <Footer />
     </Router>

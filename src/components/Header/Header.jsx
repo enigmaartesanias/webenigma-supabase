@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.png";
+import youtubeIcon from "../../assets/youtube.ico";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -108,16 +109,16 @@ const Header = () => {
           <ul className="flex flex-col md:flex-row md:space-x-6 md:items-center px-4 pb-4 md:pb-0 pt-4 h-full overflow-y-auto md:h-auto md:overflow-visible">
             {/* Sobre Mi */}
             <li>
-          <Link
-           to="/sobremi"
-           className="block px-4 py-2 hover:text-gray-500"
-           onClick={() => {
-           if (window.innerWidth < 768) toggleMenu();
-           setActiveDropdown(null);
-         }}
-          >
-            Sobre mí
-           </Link>
+              <Link
+                to="/sobremi"
+                className="block px-4 py-2 hover:text-gray-500"
+                onClick={() => {
+                  if (window.innerWidth < 768) toggleMenu();
+                  setActiveDropdown(null);
+                }}
+              >
+                Sobre mí
+              </Link>
             </li>
 
             {/* Materiales con submenús */}
@@ -154,33 +155,53 @@ const Header = () => {
               </li>
             ))}
 
-           {/* Personalizados */}
-          <li>
-          <Link
-            to="/personalizado"
-            className="block px-4 py-2 hover:text-gray-500"
-            onClick={() => {
-            if (window.innerWidth < 768) toggleMenu();
-            setActiveDropdown(null);
-            }}
-          >
-            Personalizados
-            </Link>
-          </li>
+            {/* Personalizados */}
+            <li>
+              <Link
+                to="/personalizado"
+                className="block px-4 py-2 hover:text-gray-500"
+                onClick={() => {
+                  if (window.innerWidth < 768) toggleMenu();
+                  setActiveDropdown(null);
+                }}
+              >
+                Personalizados
+              </Link>
+            </li>
 
-          {/* Contacto */}
-          <li>
-          <Link
-           to="/contacto"
-           className="block px-4 py-2 hover:text-gray-500"
-            onClick={() => {
-            if (window.innerWidth < 768) toggleMenu();
-             setActiveDropdown(null);
-           }}
-          >
-           Contacto
-          </Link>
-          </li>
+            {/* Videos Shorts */}
+            <li>
+              <Link
+                to="/videoshorts"
+                className="flex items-center gap-2 block px-4 py-2 hover:text-gray-500 justify-center md:justify-start"
+                onClick={() => {
+                  if (window.innerWidth < 768) toggleMenu();
+                  setActiveDropdown(null);
+                }}
+              >
+                <img
+                  src={youtubeIcon}
+                  alt="YouTube"
+                  className="w-5 h-5"
+                  style={{ display: 'inline-block' }}
+                />
+                Videos Shorts
+              </Link>
+            </li>
+
+            {/* Contacto */}
+            <li>
+              <Link
+                to="/contacto"
+                className="block px-4 py-2 hover:text-gray-500"
+                onClick={() => {
+                  if (window.innerWidth < 768) toggleMenu();
+                  setActiveDropdown(null);
+                }}
+              >
+                Contacto
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
