@@ -8,6 +8,15 @@ import per4 from '../../assets/images/personalizados/per4.jpg';
 import per5 from '../../assets/images/personalizados/per5.jpg';
 import per6 from '../../assets/images/personalizados/per6.jpg';
 import per7 from '../../assets/images/personalizados/per7.jpg';
+import per8 from '../../assets/images/personalizados/per8.jpg';
+import per9 from '../../assets/images/personalizados/per9.jpg';
+import per10 from '../../assets/images/personalizados/per10.jpg';
+import per11 from '../../assets/images/personalizados/per11.jpg';
+import per12 from '../../assets/images/personalizados/per12.jpg';
+import per13 from '../../assets/images/personalizados/per13.jpg';
+import per14 from '../../assets/images/personalizados/per14.jpg';
+import per15 from '../../assets/images/personalizados/per15.jpg';
+
 
 const personalizadosData = [
   { id: 1, src: per1, alt: 'A', title: 'Dije sol y luna', description: 'Dijes personalizados de alpaca con piedras de cuarzo' },
@@ -17,6 +26,14 @@ const personalizadosData = [
   { id: 5, src: per5, alt: 'A', title: 'Pulsera Tejida con nombres', description: 'Pulsera en cobre con bronce tejidas con piedras' },
   { id: 6, src: per6, alt: 'A', title: 'Pulsera corazón cobre y bronce', description: 'Pulsera con iniciales ,en cobre con bronce' },
   { id: 7, src: per7, alt: 'A', title: 'Pulsera de cobre con flor y bronce', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
+  { id: 8, src: per8, alt: 'A', title: 'Pulsera de cobre con flor y bronce', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
+  { id: 9, src: per9, alt: 'A', title: 'Pulsera de cobre con flor y bronce', description: 'Pulsera de cobre con bronce con aplicación de flor y nombre' },
+  { id: 10, src: per10, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
+  { id: 11, src: per11, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
+  { id: 12, src: per12, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
+  { id: 13, src: per13, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
+  { id: 14, src: per14, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
+  { id: 15, src: per15, alt: 'A', title: 'Personalizado', description: 'Personalizado' },
 ];
 
 const Personalizado = () => {
