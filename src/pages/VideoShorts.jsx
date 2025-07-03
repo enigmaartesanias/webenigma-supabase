@@ -41,17 +41,21 @@ const shortsData = [
 
 const VideoShorts = () => {
   return (
-    <main className="bg-white py-8 md:py-10 pt-16 min-h-screen">
+    <main className="bg-white py-8 md:py-10 pt-8 md:pt-16 min-h-screen">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
-        <h1 className="mt-6 text-1xl md:text-3xl lg:text-4xl font-semibold text-center text-gray-900 mb-4">
+        <h1 className="mt-6 text-1xl md:text-3xl lg:text-4xl font-semibold text-center text-gray-900 mt-14 mb-4">
           Video Shorts – Inspiración en Joyería Artesanal
         </h1>
         <p className="text-sm md:text-lg text-center text-gray-700 mb-10 max-w-3xl mx-auto">
           Disfruta de nuestros videos cortos en formato vertical y descubre el arte, la técnica y la inspiración detrás de cada pieza. ¡Síguenos en YouTube para más contenido exclusivo!
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {shortsData.map((video) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {shortsData.map((video, idx) => (
             <div key={video.id} className="flex flex-col items-center mb-8">
+              {/* Número de VideoShorts */}
+              <span className="mb-2 text-xs md:text-sm text-gray-500 font-semibold">
+                VideoShorts {idx + 1} de {shortsData.length}
+              </span>
               <div
                 className="rounded-lg overflow-hidden shadow-lg bg-black flex justify-center w-full"
                 style={{

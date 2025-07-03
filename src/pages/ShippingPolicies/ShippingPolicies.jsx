@@ -34,7 +34,7 @@ const ShippingPolicies = () => {
           <li>Once your order is shipped, you will receive the corresponding tracking number.</li>
         </ul>
         <p className="text-gray-700">
-          For inquiries within the country, contact us on WhatsApp <span className="font-semibold">980282376</span>.
+          For inquiries within the country, contact us on WhatsApp <span className="font-semibold">96282376</span>.
         </p>
       </section>
     </div>

@@ -34,7 +34,7 @@ const PoliticasEnvios = () => {
           <li>Una vez enviado tu pedido, recibirás el número de seguimiento correspondiente.</li>
         </ul>
         <p className="text-gray-700">
-          Para consultas dentro del país, contáctanos al WhatsApp <span className="font-semibold">980282376</span>.
+          Para consultas dentro del país, contáctanos al WhatsApp <span className="font-semibold">960282376</span>.
         </p>
       </section>
     </div>
