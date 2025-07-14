@@ -20,15 +20,26 @@ import Contacto from './pages/Contacto/Contacto';
 import Personalizado from './pages/Personalizado/Personalizado';
 import PoliticasEnvios from './pages/PoliticasEnvios/PoliticasEnvios';
 import ShippingPolicies from './pages/ShippingPolicies/ShippingPolicies';
-import ScrollToTop from './components/ScrollToTop'; // <-- Importa el componente
+import ScrollToTop from './components/ScrollToTop';
 import VideoShorts from './pages/VideoShorts';
+
+// src/App.jsx (Fragmento - solo las nuevas rutas)
+import SignUp from './components/SignUp'; // Importa el componente de registro
+import Login from './components/Login';   // Importa el componente de inicio de sesión
+
+
+// Importa el nuevo componente de administración del carrusel
+import CarouselAdmin from './components/CarouselAdmin'; 
 
 const App = () => {
   return (
     <Router>
-      <ScrollToTop /> {/* <-- Agrega aquí el componente */}
+      <ScrollToTop />
       <Header />
       <Routes>
+<Route path="/signup" element={<SignUp />} />
+<Route path="/login" element={<Login />} />
+
         <Route path="/" element={<Home />} />
         <Route path="/sobremi" element={<SobreMi />} />
         <Route path="/plataanillos" element={<PlataAnillos />} />
@@ -48,6 +59,10 @@ const App = () => {
         <Route path="/politicasenvios" element={<PoliticasEnvios />} />
         <Route path="/shippingpolicies" element={<ShippingPolicies />} />
         <Route path="/videoshorts" element={<VideoShorts />} /> 
+        
+        {/* Nueva ruta para el panel de administración del carrusel */}
+        {/* Podrías llamarla '/admin' o '/panel-control' si prefieres */}
+        <Route path="/admin-carrusel" element={<CarouselAdmin />} /> 
       </Routes>
       <Footer />
     </Router>
