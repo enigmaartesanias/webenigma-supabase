@@ -1,36 +1,27 @@
 import React, { useState } from 'react';
-import { auth } from '../supabaseClient'; // Importa el módulo de autenticación
+import { supabase } from '../supabaseClient';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState('');
-    const [error, setError] = useState('');
+    const [error, setError] = useState(null);
+    const navigate = useNavigate(); // Hook para navegar
 
     const handleSignUp = async (e) => {
         e.preventDefault();
         setLoading(true);
-        setMessage('');
-        setError('');
+        setError(null);
 
         try {
-            const { data, error } = await auth.signUp({
-                email: email,
-                password: password,
-            });
+            const { error } = await supabase.auth.signUp({ email, password });
 
-            if (error) {
-                throw error;
-            }
-
-            if (data.user) {
-                setMessage('¡Registro exitoso! Por favor, revisa tu correo electrónico para confirmar tu cuenta.');
-            } else {
-                setMessage('Registro iniciado. Por favor, revisa tu correo electrónico para confirmar tu cuenta.');
-            }
+            if (error) throw error;
+            alert('¡Registro exitoso! Por favor, revisa tu email para confirmar tu cuenta.');
+            navigate('/login'); // Redirige al login después del registro
         } catch (err) {
-            console.error('Error durante el registro:', err.message);
+            console.error('Error al registrarse:', err.message);
             setError(`Error al registrarse: ${err.message}`);
         } finally {
             setLoading(false);
@@ -38,48 +29,52 @@ const SignUp = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Registrarse</h2>
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
+                <h2 className="text-2xl font-bold text-center mb-6">Registrarse</h2>
                 <form onSubmit={handleSignUp}>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-                            Correo Electrónico:
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                            Email
                         </label>
                         <input
                             type="email"
                             id="email"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            placeholder="tu@email.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            placeholder="tu@ejemplo.com"
                             required
                         />
                     </div>
                     <div className="mb-6">
-                        <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
-                            Contraseña:
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+                            Contraseña
                         </label>
                         <input
                             type="password"
                             id="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                             placeholder="********"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                             required
                         />
                     </div>
-                    {message && <p className="text-green-500 text-sm mb-4 text-center">{message}</p>}
-                    {error && <p className="text-red-500 text-sm mb-4 text-center">{error}</p>}
-                    <button
-                        type="submit"
-                        disabled={loading}
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline disabled:opacity-50"
-                    >
-                        {loading ? 'Registrando...' : 'Registrarse'}
-                    </button>
+                    {error && <p className="text-red-500 text-xs italic mb-4">{error}</p>}
+                    <div className="flex items-center justify-between">
+                        <button
+                            type="submit"
+                            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            disabled={loading}
+                        >
+                            {loading ? 'Cargando...' : 'Registrarse'}
+                        </button>
+                    </div>
                 </form>
+                <p className="text-center text-gray-500 text-xs mt-4">
+                    ¿Ya tienes cuenta? <a href="/login" className="text-blue-500 hover:text-blue-800">Inicia sesión aquí</a>
+                </p>
             </div>
         </div>
     );

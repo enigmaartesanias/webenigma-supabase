@@ -1,3 +1,4 @@
+import React from 'react'; // Mantener React importado
 import './styles/styles.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
@@ -23,50 +24,59 @@ import ShippingPolicies from './pages/ShippingPolicies/ShippingPolicies';
 import ScrollToTop from './components/ScrollToTop';
 import VideoShorts from './pages/VideoShorts';
 
-// src/App.jsx (Fragmento - solo las nuevas rutas)
-import SignUp from './components/SignUp'; // Importa el componente de registro
-import Login from './components/Login';   // Importa el componente de inicio de sesión
+// Importaciones de autenticación y administración
+import SignUp from './components/SignUp';
+import Login from './components/Login';
+import CarouselAdmin from './components/CarouselAdmin';
+import PrivateRoute from './components/PrivateRoute'; // Importa PrivateRoute
+import { AuthProvider } from './contexts/AuthContext'; // Importa AuthProvider
 
-
-// Importa el nuevo componente de administración del carrusel
-import CarouselAdmin from './components/CarouselAdmin'; 
-
-const App = () => {
+function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Header />
-      <Routes>
-<Route path="/signup" element={<SignUp />} />
-<Route path="/login" element={<Login />} />
+    <AuthProvider> {/* Envuelve toda la aplicación con AuthProvider para que el contexto esté disponible */}
+      <Router>
+        <ScrollToTop />
+        <Header />
+        <Routes>
+          {/* Rutas de autenticación */}
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
 
-        <Route path="/" element={<Home />} />
-        <Route path="/sobremi" element={<SobreMi />} />
-        <Route path="/plataanillos" element={<PlataAnillos />} />
-        <Route path="/platapulseras" element={<PlataPulseras />} />
-        <Route path="/platacollares" element={<PlataCollares />} />
-        <Route path="/plataaretes" element={<PlataAretes />} />
-        <Route path="/cobreanillos" element={<CobreAnillos />} />
-        <Route path="/cobrepulseras" element={<CobrePulseras />} />
-        <Route path="/cobrecollares" element={<CobreCollares />} />
-        <Route path="/alpacaanillos" element={<AlpacaAnillos />} />
-        <Route path="/alpacapulseras" element={<AlpacaPulseras />} />
-        <Route path="/alpacaaretes" element={<AlpacaAretes />} />
-        <Route path="/alpacacollares" element={<AlpacaCollares />} />
-        <Route path="/cobrearetes" element={<CobreAretes />} />
-        <Route path="/contacto" element={<Contacto />} />
-        <Route path="/personalizado" element={<Personalizado />} />
-        <Route path="/politicasenvios" element={<PoliticasEnvios />} />
-        <Route path="/shippingpolicies" element={<ShippingPolicies />} />
-        <Route path="/videoshorts" element={<VideoShorts />} /> 
-        
-        {/* Nueva ruta para el panel de administración del carrusel */}
-        {/* Podrías llamarla '/admin' o '/panel-control' si prefieres */}
-        <Route path="/admin-carrusel" element={<CarouselAdmin />} /> 
-      </Routes>
-      <Footer />
-    </Router>
+          {/* Rutas públicas existentes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/sobremi" element={<SobreMi />} />
+          <Route path="/plataanillos" element={<PlataAnillos />} />
+          <Route path="/platapulseras" element={<PlataPulseras />} />
+          <Route path="/platacollares" element={<PlataCollares />} />
+          <Route path="/plataaretes" element={<PlataAretes />} />
+          <Route path="/cobreanillos" element={<CobreAnillos />} />
+          <Route path="/cobrepulseras" element={<CobrePulseras />} />
+          <Route path="/cobrecollares" element={<CobreCollares />} />
+          <Route path="/alpacaanillos" element={<AlpacaAnillos />} />
+          <Route path="/alpacapulseras" element={<AlpacaPulseras />} />
+          <Route path="/alpacaaretes" element={<AlpacaAretes />} />
+          <Route path="/alpacacollares" element={<AlpacaCollares />} />
+          <Route path="/cobrearetes" element={<CobreAretes />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/personalizado" element={<Personalizado />} />
+          <Route path="/politicasenvios" element={<PoliticasEnvios />} />
+          <Route path="/shippingpolicies" element={<ShippingPolicies />} />
+          <Route path="/videoshorts" element={<VideoShorts />} />
+
+          {/* Ruta protegida para el panel de administración del carrusel */}
+          <Route
+            path="/admin-carrusel"
+            element={
+              <PrivateRoute> {/* Envuelve CarouselAdmin con PrivateRoute */}
+                <CarouselAdmin />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+        <Footer />
+      </Router>
+    </AuthProvider>
   );
-};
+}
 
 export default App;
