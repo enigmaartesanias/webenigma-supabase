@@ -1,4 +1,4 @@
-import React from 'react'; // Mantener React importado
+import React from 'react';
 import './styles/styles.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
@@ -28,12 +28,13 @@ import VideoShorts from './pages/VideoShorts';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 import CarouselAdmin from './components/CarouselAdmin';
-import PrivateRoute from './components/PrivateRoute'; // Importa PrivateRoute
-import { AuthProvider } from './contexts/AuthContext'; // Importa AuthProvider
+import PrivateRoute from './components/PrivateRoute';
+import { AuthProvider } from './contexts/AuthContext';
+import PublicCarousel from './components/PublicCarousel'; // Importa el carrusel público
 
 function App() {
   return (
-    <AuthProvider> {/* Envuelve toda la aplicación con AuthProvider para que el contexto esté disponible */}
+    <AuthProvider>
       <Router>
         <ScrollToTop />
         <Header />
@@ -63,11 +64,14 @@ function App() {
           <Route path="/shippingpolicies" element={<ShippingPolicies />} />
           <Route path="/videoshorts" element={<VideoShorts />} />
 
+          {/* Carrusel público para todos los usuarios */}
+          <Route path="/carrusel" element={<PublicCarousel />} />
+
           {/* Ruta protegida para el panel de administración del carrusel */}
           <Route
             path="/admin-carrusel"
             element={
-              <PrivateRoute> {/* Envuelve CarouselAdmin con PrivateRoute */}
+              <PrivateRoute>
                 <CarouselAdmin />
               </PrivateRoute>
             }

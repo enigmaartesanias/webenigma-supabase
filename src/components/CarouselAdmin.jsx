@@ -2,30 +2,31 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '../supabaseClient';
 import ImageUploader from './ImageUploader';
 import { v4 as uuidv4 } from 'uuid';
-import { useAuth } from '../contexts/AuthContext'; // Importa el hook useAuth
+import { useAuth } from '../contexts/AuthContext';
 
 const CarouselAdmin = () => {
-    const { user } = useAuth(); // Obtiene el usuario del contexto
+    const { user } = useAuth();
 
-    // El console.log de depuración ahora puede ser más útil
-    console.log('CarouselAdmin: Usuario actual desde contexto:', user);
+    // Si no hay usuario, muestra mensaje de acceso restringido
+    if (!user) {
+        return (
+            <div className="p-8 text-center text-gray-700">
+                <h2 className="text-2xl font-bold mb-4">Acceso restringido</h2>
+                <p>Debes iniciar sesión para administrar el carrusel.</p>
+            </div>
+        );
+    }
 
     const [carouselItems, setCarouselItems] = useState([]);
-    const [loading, setLoading] = useState(true); // Este loading es para los ítems del carrusel, no para la autenticación
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [newItemDescription, setNewItemDescription] = useState('');
     const [newItemImageUrl, setNewItemImageUrl] = useState('');
     const [editingItem, setEditingItem] = useState(null);
 
-    // Asegúrate de que fetchCarouselItems se ejecute solo si hay un usuario
     useEffect(() => {
-        if (user) { // Solo si el usuario está autenticado
-            fetchCarouselItems();
-        } else {
-            setLoading(false); // Si no hay usuario, no hay ítems que cargar
-            setCarouselItems([]);
-        }
-    }, [user]); // Depende del objeto 'user' del contexto
+        fetchCarouselItems();
+    }, [user]);
 
     const fetchCarouselItems = async () => {
         try {
@@ -39,7 +40,6 @@ const CarouselAdmin = () => {
             setCarouselItems(data);
             setError(null);
         } catch (err) {
-            console.error('Error al obtener los ítems del carrusel para administración:', err.message);
             setError('Error al cargar los ítems del carrusel para administración.');
         } finally {
             setLoading(false);
@@ -50,10 +50,6 @@ const CarouselAdmin = () => {
         e.preventDefault();
         if (!newItemImageUrl || !newItemDescription) {
             setError('La URL de la imagen y la descripción son obligatorias.');
-            return;
-        }
-        if (!user) { // Doble verificación por si acaso
-            setError('Debes iniciar sesión para añadir o actualizar ítems.');
             return;
         }
 
@@ -78,17 +74,12 @@ const CarouselAdmin = () => {
             fetchCarouselItems();
             setError(null);
         } catch (err) {
-            console.error('Error al añadir/actualizar ítem:', err.message);
             setError(`Error al ${editingItem ? 'actualizar' : 'añadir'} el ítem: ${err.message}`);
         }
     };
 
     const handleDeleteItem = async (id) => {
         if (!window.confirm('¿Estás seguro de que quieres eliminar este ítem? Esto también eliminará la imagen asociada.')) {
-            return;
-        }
-        if (!user) { // Doble verificación por si acaso
-            setError('Debes iniciar sesión para eliminar ítems.');
             return;
         }
 
@@ -102,21 +93,14 @@ const CarouselAdmin = () => {
                 .eq('id', id)
                 .single();
 
-            if (fetchError) {
-                console.error('Error al obtener la URL de la imagen del ítem:', fetchError.message);
-                throw new Error(`No se pudo obtener la URL de la imagen: ${fetchError.message}`);
-            }
+            if (fetchError) throw new Error(`No se pudo obtener la URL de la imagen: ${fetchError.message}`);
 
             const { error: deleteDbError } = await supabase
                 .from('carousel_items')
                 .delete()
                 .eq('id', id);
 
-            if (deleteDbError) {
-                console.error('Error al eliminar el ítem de la base de datos:', deleteDbError.message);
-                throw new Error(`No se pudo eliminar el ítem de la base de datos: ${deleteDbError.message}`);
-            }
-            console.log('Ítem eliminado de la base de datos (ID:', id, ')');
+            if (deleteDbError) throw new Error(`No se pudo eliminar el ítem de la base de datos: ${deleteDbError.message}`);
 
             if (itemToDelete && itemToDelete.image_url) {
                 const urlParts = itemToDelete.image_url.split('/');
@@ -129,23 +113,13 @@ const CarouselAdmin = () => {
                         .remove([filePathInStorage]);
 
                     if (deleteStorageError) {
-                        console.error('Error al eliminar la imagen del Storage:', deleteStorageError.message);
                         setError(`Ítem eliminado de la DB, pero error al eliminar la imagen del Storage: ${deleteStorageError.message}`);
-                    } else {
-                        console.log('Imagen eliminada del Storage:', filePathInStorage);
                     }
-                } else {
-                    console.warn('No se pudo extraer el filePath de la URL de la imagen:', itemToDelete.image_url);
                 }
-            } else {
-                console.warn('No se encontró URL de imagen para el ítem a eliminar o es nula.');
             }
 
             await fetchCarouselItems();
-            console.log('Lista de ítems actualizada.');
-
         } catch (err) {
-            console.error('Error general al eliminar ítem:', err.message);
             setError(`Error al eliminar el ítem: ${err.message}`);
         } finally {
             setLoading(false);
@@ -174,18 +148,6 @@ const CarouselAdmin = () => {
 
     if (loading) {
         return <div className="p-4 text-center text-gray-700">Cargando ítems del carrusel...</div>;
-    }
-
-    if (error) {
-        return (
-            <div className="container mx-auto p-6 max-w-4xl bg-white shadow-xl rounded-lg mt-8">
-                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
-                    <strong className="font-bold">¡Error!</strong>
-                    <span className="block sm:inline"> {error}</span>
-                </div>
-                {renderAdminContent()}
-            </div>
-        );
     }
 
     const renderAdminContent = () => (
@@ -300,6 +262,12 @@ const CarouselAdmin = () => {
 
     return (
         <div className="container mx-auto p-6 max-w-4xl bg-white shadow-xl rounded-lg mt-8">
+            {error && (
+                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                    <strong className="font-bold">¡Error!</strong>
+                    <span className="block sm:inline"> {error}</span>
+                </div>
+            )}
             {renderAdminContent()}
         </div>
     );

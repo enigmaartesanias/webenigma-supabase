@@ -5,18 +5,21 @@ import youtubeIcon from "../../assets/youtube.ico";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null); // Ahora 'activeDropdown' almacenará el tipo de joya (ej. 'Anillos')
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleDropdown = (material) => {
-    setActiveDropdown(activeDropdown === material ? null : material);
+  // 'toggleDropdown' ahora recibe el tipo de joya (ej. 'Anillos')
+  const toggleDropdown = (jewelryType) => {
+    setActiveDropdown(activeDropdown === jewelryType ? null : jewelryType);
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       const headerElement = document.getElementById('main-header');
       const mobileMenuElement = document.getElementById('mobile-menu-nav');
-      const submenus = document.querySelectorAll('.has-submenu');
+      const submenus = document.querySelectorAll('.has-submenu'); // Esto sigue siendo útil para detectar clics fuera de cualquier menú
+      
+      // Lógica para cerrar el menú móvil si se hace clic fuera
       if (
         menuOpen &&
         headerElement && !headerElement.contains(event.target) &&
@@ -26,6 +29,8 @@ const Header = () => {
         setActiveDropdown(null);
         return;
       }
+      
+      // Lógica para cerrar el dropdown si se hace clic fuera de él
       if (activeDropdown) {
         let clickedInsideSubmenu = false;
         submenus.forEach((li) => {
@@ -44,26 +49,31 @@ const Header = () => {
     };
   }, [menuOpen, activeDropdown]);
 
-  const materials = ['Plata', 'Alpaca', 'Cobre'];
-  // Define los paths para cada material y subcategoría
-  const subcategoriesByMaterial = {
-    Plata: [
-      { name: 'Anillos', path: '/plataanillos' },
-      { name: 'Pulseras', path: '/platapulseras' },
-      { name: 'Collares', path: '/platacollares' },
-      { name: 'Aretes', path: '/plataaretes' },
+  // NUEVA DEFINICIÓN: Tipos de Joyas (ahora son tus categorías principales)
+  const jewelryTypes = ['Anillos', 'Pulseras', 'Collares', 'Aretes'];
+
+  // NUEVA DEFINICIÓN: Materiales por Tipo de Joya
+  // Las claves son los tipos de joyas, y los valores son objetos con 'name' y 'path' para cada material
+  const materialsByJewelryType = {
+    Anillos: [
+      { name: 'Plata', path: '/plataanillos' },
+      { name: 'Alpaca', path: '/alpacaanillos' },
+      { name: 'Cobre', path: '/cobreanillos' },
     ],
-    Alpaca: [
-      { name: 'Anillos', path: '/alpacaanillos' },
-      { name: 'Pulseras', path: '/alpacapulseras' },
-      { name: 'Collares', path: '/alpacacollares' },
-      { name: 'Aretes', path: '/alpacaaretes' },
+    Pulseras: [
+      { name: 'Plata', path: '/platapulseras' },
+      { name: 'Alpaca', path: '/alpacapulseras' },
+      { name: 'Cobre', path: '/cobrepulseras' },
     ],
-    Cobre: [
-      { name: 'Anillos', path: '/cobreanillos' },
-      { name: 'Pulseras', path: '/cobrepulseras' },
-      { name: 'Collares', path: '/cobrecollares' },
-      { name: 'Aretes', path: '/cobrearetes' },
+    Collares: [
+      { name: 'Plata', path: '/platacollares' },
+      { name: 'Alpaca', path: '/alpacacollares' },
+      { name: 'Cobre', path: '/cobrecollares' },
+    ],
+    Aretes: [
+      { name: 'Plata', path: '/plataaretes' },
+      { name: 'Alpaca', path: '/alpacaaretes' },
+      { name: 'Cobre', path: '/cobrearetes' },
     ],
   };
 
@@ -107,7 +117,7 @@ const Header = () => {
           )}
 
           <ul className="flex flex-col md:flex-row md:space-x-6 md:items-center px-4 pb-4 md:pb-0 pt-4 h-full overflow-y-auto md:h-auto md:overflow-visible">
-            {/* Sobre Mi */}
+            {/* Sobre Mi (se mantiene igual) */}
             <li>
               <Link
                 to="/sobremi"
@@ -121,33 +131,34 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Materiales con submenús */}
-            {materials.map((material) => (
-              <li key={material} className="group has-submenu md:relative">
+            {/* Tipos de Joyas con submenús (antes eran Materiales) */}
+            {jewelryTypes.map((jewelryType) => (
+              <li key={jewelryType} className="group has-submenu md:relative">
                 <button
                   className="block px-4 py-2 hover:text-gray-500 w-full text-center md:inline"
-                  onClick={() => toggleDropdown(material)}
+                  onClick={() => toggleDropdown(jewelryType)} // Ahora pasamos el tipo de joya
                 >
-                  {material}
+                  {jewelryType} {/* Muestra el nombre del tipo de joya (Anillos, Pulseras, etc.) */}
                 </button>
                 <ul
                   className={`${
-                    activeDropdown === material
+                    activeDropdown === jewelryType // Compara con el tipo de joya
                       ? 'block md:absolute bg-gray-200 md:min-w-[160px] md:mt-2 shadow-lg z-50'
                       : 'hidden'
                   }`}
                 >
-                  {subcategoriesByMaterial[material].map((sub) => (
-                    <li key={`${material}-${sub.name}`}>
+                  {/* Mapea los materiales para el tipo de joya actual */}
+                  {materialsByJewelryType[jewelryType].map((material) => (
+                    <li key={`${jewelryType}-${material.name}`}>
                       <Link
-                        to={sub.path}
+                        to={material.path} // La ruta ya está definida en 'material.path'
                         className="block px-4 py-2 hover:bg-gray-200"
                         onClick={() => {
                           setActiveDropdown(null);
                           if (window.innerWidth < 768) toggleMenu();
                         }}
                       >
-                        {sub.name}
+                        {material.name} {/* Muestra el nombre del material (Plata, Alpaca, Cobre) */}
                       </Link>
                     </li>
                   ))}
@@ -155,7 +166,7 @@ const Header = () => {
               </li>
             ))}
 
-            {/* Personalizados */}
+            {/* Personalizados (se mantiene igual) */}
             <li>
               <Link
                 to="/personalizado"
@@ -169,7 +180,7 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Videos Shorts */}
+            {/* Videos Shorts (se mantiene igual) */}
             <li>
               <Link
                 to="/videoshorts"
@@ -189,7 +200,7 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Contacto */}
+            {/* Contacto (se mantiene igual) */}
             <li>
               <Link
                 to="/contacto"

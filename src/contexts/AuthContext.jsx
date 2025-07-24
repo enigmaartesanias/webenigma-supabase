@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider value={value}>
       {/* Muestra un indicador de carga mientras se verifica la autenticación */}
-      {loading ? <div style={{ textAlign: 'center', padding: '20px' }}>Cargando autenticación...</div> : children}
+      {loading ? <div style={{ textAlign: 'center', padding: '20px' }}>Cargando..</div> : children}
     </AuthContext.Provider>
   );
 };

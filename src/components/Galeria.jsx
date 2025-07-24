@@ -41,7 +41,7 @@ const Galeria = () => {
       <h4 className="text-2xl text-gray-800 text-center mb-4 sm:mb-8 sm:text-5xl lg:text-4xl tracking-tight">
         Explora Nuestra Joyeria Artesanal
       </h4>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-10">
         {images.map((img, index) => (
           <div
             key={index}
@@ -55,21 +55,27 @@ const Galeria = () => {
               />
             </div>
             <div className="p-2 flex flex-col items-center flex-grow">
-              <span className="text-lg font-bold text-gray-900 uppercase mb-2 tracking-wider">
-                {img.text}
-              </span>
-              <div className="flex flex-wrap justify-center gap-2 mt-auto">
-                {materials.map((mat) => (
-                  <Link
-                    key={mat.key}
-                    to={routes[mat.key][img.slug]}
-                    className="inline-flex items-center justify-center px-6 py-2 border-2 border-gray-300 text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-800 hover:text-white hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200 ease-in-out shadow-sm"
-                  >
-                    {mat.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
+  {/* Texto */}
+  <span className="text-base font-bold text-gray-900 uppercase mb-2 tracking-wider">
+    {/* CAMBIO: de text-lg a text-base */}
+    {img.text}
+  </span>
+  <div className="flex flex-wrap justify-center gap-2 mt-auto">
+    {materials.map((mat) => (
+      <Link
+        key={mat.key}
+        to={routes[mat.key][img.slug]}
+        className="inline-flex items-center justify-center px-4 py-1 border-2 border-gray-300 text-sm font-medium rounded-full text-gray-700 bg-white hover:bg-gray-800 hover:text-white hover:border-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200 ease-in-out shadow-sm"
+        // CAMBIOS:
+        // px-6 a px-4 (padding horizontal)
+        // py-2 a py-1 (padding vertical)
+        // text-base a text-sm (tamaño de fuente)
+      >
+        {mat.name}
+      </Link>
+    ))}
+  </div>
+</div>
           </div>
         ))}
       </div>
