@@ -5,10 +5,13 @@ import youtubeIcon from "../../assets/youtube.ico";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); // Ahora 'activeDropdown' almacenará el tipo de joya (ej. 'Anillos')
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  // Nuevo estado para controlar si el header debe ser visible y fijo
+  const [headerVisible, setHeaderVisible] = useState(true);
+  // Estado para la última posición del scroll
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  // 'toggleDropdown' ahora recibe el tipo de joya (ej. 'Anillos')
   const toggleDropdown = (jewelryType) => {
     setActiveDropdown(activeDropdown === jewelryType ? null : jewelryType);
   };
@@ -17,9 +20,7 @@ const Header = () => {
     const handleClickOutside = (event) => {
       const headerElement = document.getElementById('main-header');
       const mobileMenuElement = document.getElementById('mobile-menu-nav');
-      const submenus = document.querySelectorAll('.has-submenu'); // Esto sigue siendo útil para detectar clics fuera de cualquier menú
-      
-      // Lógica para cerrar el menú móvil si se hace clic fuera
+      const submenus = document.querySelectorAll('.has-submenu');
       if (
         menuOpen &&
         headerElement && !headerElement.contains(event.target) &&
@@ -29,8 +30,6 @@ const Header = () => {
         setActiveDropdown(null);
         return;
       }
-      
-      // Lógica para cerrar el dropdown si se hace clic fuera de él
       if (activeDropdown) {
         let clickedInsideSubmenu = false;
         submenus.forEach((li) => {
@@ -49,11 +48,41 @@ const Header = () => {
     };
   }, [menuOpen, activeDropdown]);
 
-  // NUEVA DEFINICIÓN: Tipos de Joyas (ahora son tus categorías principales)
-  const jewelryTypes = ['Anillos', 'Pulseras', 'Collares', 'Aretes'];
+  // Nuevo useEffect para manejar el scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      // Solo aplicamos esta lógica en pantallas móviles
+      if (window.innerWidth < 768) {
+        const currentScrollY = window.scrollY;
 
-  // NUEVA DEFINICIÓN: Materiales por Tipo de Joya
-  // Las claves son los tipos de joyas, y los valores son objetos con 'name' y 'path' para cada material
+        // Si el usuario se desplaza hacia abajo (ocultamos el header)
+        if (currentScrollY > lastScrollY && currentScrollY > 100) { // Ocultar si se desplaza hacia abajo y no estamos en la parte superior
+          setHeaderVisible(false);
+        } 
+        // Si el usuario se desplaza hacia arriba (mostramos el header)
+        else if (currentScrollY < lastScrollY) {
+          setHeaderVisible(true);
+        }
+        
+        // Si el usuario está en la parte superior de la página, el header siempre es visible
+        if (currentScrollY === 0) {
+            setHeaderVisible(true);
+        }
+
+        setLastScrollY(currentScrollY);
+      } else {
+        // En desktop, siempre es visible y se comporta como sticky
+        setHeaderVisible(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]); // Dependencia: lastScrollY para detectar cambios en la posición del scroll
+
+  const jewelryTypes = ['Anillos', 'Pulseras', 'Collares', 'Aretes'];
   const materialsByJewelryType = {
     Anillos: [
       { name: 'Plata', path: '/plataanillos' },
@@ -80,7 +109,11 @@ const Header = () => {
   return (
     <header
       id="main-header"
-      className="bg-white text-black top-0 z-50 shadow-md w-full fixed md:sticky"
+      // Aplicamos las clases condicionalmente
+      className={`bg-white text-black z-50 shadow-md w-full 
+        ${headerVisible ? 'fixed top-0' : 'relative -top-16'} 
+        md:sticky md:top-0 
+        transition-all duration-300 ease-in-out`} // Animación suave
     >
       <div className="container mx-auto px-8 py-4 flex justify-between items-center">
         {/* Logo */}
@@ -99,12 +132,12 @@ const Header = () => {
         <nav
           id="mobile-menu-nav"
           className={`${
-            menuOpen ? 'translate-x-0' : 'translate-x-full'
-          } fixed right-0 w-full bg-white z-40
+            menuOpen ? 'translate-x-0' : '-translate-x-full'
+          } fixed left-0 w-full bg-white z-40 h-[calc(100vh-64px)] overflow-y-auto // Altura completa menos el header
             transform transition-transform duration-300 ease-in-out
             md:static md:block md:w-auto md:h-auto md:overflow-visible
             md:translate-x-0 md:bg-transparent`}
-          style={{ top: '64px' }}
+          style={{ top: '64px' }} // Asegura que el menú móvil se posicione debajo del header
         >
           {menuOpen && (
             <button
@@ -116,8 +149,8 @@ const Header = () => {
             </button>
           )}
 
-          <ul className="flex flex-col md:flex-row md:space-x-6 md:items-center px-4 pb-4 md:pb-0 pt-4 h-full overflow-y-auto md:h-auto md:overflow-visible">
-            {/* Sobre Mi (se mantiene igual) */}
+          <ul className="flex flex-col md:flex-row md:space-x-6 md:items-center px-4 pb-4 md:pb-0 pt-4 h-full overflow-y-auto md:h-auto md:overflow-visible text-left">
+            {/* Sobre Mi */}
             <li>
               <Link
                 to="/sobremi"
@@ -131,34 +164,37 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Tipos de Joyas con submenús (antes eran Materiales) */}
+            {/* Tipos de Joyas con submenús */}
             {jewelryTypes.map((jewelryType) => (
               <li key={jewelryType} className="group has-submenu md:relative">
                 <button
-                  className="block px-4 py-2 hover:text-gray-500 w-full text-center md:inline"
-                  onClick={() => toggleDropdown(jewelryType)} // Ahora pasamos el tipo de joya
+                  className="flex items-center justify-between w-full px-4 py-2 hover:text-gray-500 text-left md:inline md:w-auto"
+                  onClick={() => toggleDropdown(jewelryType)}
                 >
-                  {jewelryType} {/* Muestra el nombre del tipo de joya (Anillos, Pulseras, etc.) */}
+                  {jewelryType}
+                  {/* Símbolo > o v solo en móvil */}
+                  <span className="ml-2 md:hidden">
+                    {activeDropdown === jewelryType ? 'v' : '>'}
+                  </span>
                 </button>
                 <ul
                   className={`${
-                    activeDropdown === jewelryType // Compara con el tipo de joya
+                    activeDropdown === jewelryType
                       ? 'block md:absolute bg-gray-200 md:min-w-[160px] md:mt-2 shadow-lg z-50'
                       : 'hidden'
                   }`}
                 >
-                  {/* Mapea los materiales para el tipo de joya actual */}
                   {materialsByJewelryType[jewelryType].map((material) => (
                     <li key={`${jewelryType}-${material.name}`}>
                       <Link
-                        to={material.path} // La ruta ya está definida en 'material.path'
+                        to={material.path}
                         className="block px-4 py-2 hover:bg-gray-200"
                         onClick={() => {
                           setActiveDropdown(null);
                           if (window.innerWidth < 768) toggleMenu();
                         }}
                       >
-                        {material.name} {/* Muestra el nombre del material (Plata, Alpaca, Cobre) */}
+                        {material.name}
                       </Link>
                     </li>
                   ))}
@@ -166,7 +202,7 @@ const Header = () => {
               </li>
             ))}
 
-            {/* Personalizados (se mantiene igual) */}
+            {/* Personalizados */}
             <li>
               <Link
                 to="/personalizado"
@@ -180,11 +216,11 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Videos Shorts (se mantiene igual) */}
+            {/* Videos Shorts */}
             <li>
               <Link
                 to="/videoshorts"
-                className="flex items-center gap-2 block px-4 py-2 hover:text-gray-500 justify-center md:justify-start"
+                className="gap-2 block px-4 py-2 hover:text-gray-500 justify-center md:justify-start"
                 onClick={() => {
                   if (window.innerWidth < 768) toggleMenu();
                   setActiveDropdown(null);
@@ -200,7 +236,7 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Contacto (se mantiene igual) */}
+            {/* Contacto */}
             <li>
               <Link
                 to="/contacto"
