@@ -42,7 +42,7 @@ const Hero = () => {
       </div>
 
       {/* Contenedor del texto en caja semitransparente */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 ">
+      {/* <div className="absolute inset-0 flex flex-col items-center justify-center z-10 ">
         <div className="bg-black bg-opacity-50 rounded-lg px-2 py-1 mt-20">
           <h1 className="text-white text-center text-1xl sm:text-3xl md:text-4xl lg:text-3xl drop-shadow-lg">
             Enigma artesanías y accesorios
@@ -51,7 +51,7 @@ const Hero = () => {
       de Aldo Magallanes
     </p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

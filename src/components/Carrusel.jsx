@@ -52,8 +52,9 @@ const Carrusel = () => {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
-                    draggable: false,
-                    swipe: false,
+                    // *** CAMBIO AQUÍ: Habilita el deslizamiento con el dedo y arrastre ***
+                    draggable: true, // Permite arrastrar los slides
+                    swipe: true,     // Permite deslizar con el dedo
                 }
             }
         ]
