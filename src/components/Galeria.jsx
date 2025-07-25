@@ -79,7 +79,7 @@ const Galeria = () => {
                 <div className="w-11/12 mx-auto sm:w-3/4 md:w-3/4 lg:w-2/3 xl:w-1/2 bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-103 hover:shadow-2xl flex flex-col">
                     <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden">
                         <img
-                            src="../src/assets/images/personalizados/per10.jpg" 
+                             src="/images/personalizados/per10.jpg" 
                             alt="Joyas Personalizadas"
                             className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
                         />
