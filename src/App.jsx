@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles/styles.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
+// Páginas
 import Home from './pages/Home/Home';
-import Header from './components/Header/Header';
-import Footer from './components/Footer';
 import PlataAnillos from './pages/PlataAnillos/PlataAnillos';
 import PlataPulseras from './pages/PlataPulseras/PlataPulseras';
 import PlataCollares from './pages/PlataCollares/PlataCollares';
@@ -21,16 +21,27 @@ import Contacto from './pages/Contacto/Contacto';
 import Personalizado from './pages/Personalizado/Personalizado';
 import PoliticasEnvios from './pages/PoliticasEnvios/PoliticasEnvios';
 import ShippingPolicies from './pages/ShippingPolicies/ShippingPolicies';
-import ScrollToTop from './components/ScrollToTop';
 import VideoShorts from './pages/VideoShorts';
 
-// Importaciones de autenticación y administración
+// Componentes
+import Header from './components/Header/Header';
+import Footer from './components/Footer';
+
+import PublicCarousel from './components/PublicCarousel';
+import ProductoDetalle from './components/ProductoDetalle';
+
+
+// Autenticación
 import SignUp from './components/SignUp';
 import Login from './components/Login';
-import CarouselAdmin from './components/CarouselAdmin';
-import PrivateRoute from './components/PrivateRoute';
 import { AuthProvider } from './contexts/AuthContext';
-import PublicCarousel from './components/PublicCarousel'; // Importa el carrusel público
+import PrivateRoute from './components/PrivateRoute';
+
+// Panel de administración
+import AdminPanel from './components/AdminPanel';
+import CarouselAdmin from './components/CarouselAdmin';
+import CategoriaAdmin from './components/CategoriaAdmin';     // ✅ Este sí existe (si lo tienes para categorías)
+import ProductoAdmin from './components/ProductoAdmin';       // ✅ El que yo te di, completo
 
 function App() {
   return (
@@ -39,11 +50,7 @@ function App() {
         <ScrollToTop />
         <Header />
         <Routes>
-          {/* Rutas de autenticación */}
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-
-          {/* Rutas públicas existentes */}
+          {/* Rutas públicas */}
           <Route path="/" element={<Home />} />
           <Route path="/sobremi" element={<SobreMi />} />
           <Route path="/plataanillos" element={<PlataAnillos />} />
@@ -53,26 +60,58 @@ function App() {
           <Route path="/cobreanillos" element={<CobreAnillos />} />
           <Route path="/cobrepulseras" element={<CobrePulseras />} />
           <Route path="/cobrecollares" element={<CobreCollares />} />
+          <Route path="/cobrearetes" element={<CobreAretes />} />
           <Route path="/alpacaanillos" element={<AlpacaAnillos />} />
           <Route path="/alpacapulseras" element={<AlpacaPulseras />} />
           <Route path="/alpacaaretes" element={<AlpacaAretes />} />
           <Route path="/alpacacollares" element={<AlpacaCollares />} />
-          <Route path="/cobrearetes" element={<CobreAretes />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/personalizado" element={<Personalizado />} />
           <Route path="/politicasenvios" element={<PoliticasEnvios />} />
           <Route path="/shippingpolicies" element={<ShippingPolicies />} />
           <Route path="/videoshorts" element={<VideoShorts />} />
-
-          {/* Carrusel público para todos los usuarios */}
           <Route path="/carrusel" element={<PublicCarousel />} />
+          <Route path="/producto/:id" element={<ProductoDetalle />} />
 
-          {/* Ruta protegida para el panel de administración del carrusel */}
+          {/* Rutas de autenticación */}
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+
+          {/* Panel de administración */}
           <Route
-            path="/admin-carrusel"
+            path="/admin"
+            element={
+              <PrivateRoute>
+                <AdminPanel />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/admin/carrusel"
             element={
               <PrivateRoute>
                 <CarouselAdmin />
+              </PrivateRoute>
+            }
+          />
+
+          {/* ✅ Esta ruta es para administrar CATEGORÍAS (solo si tienes ese componente) */}
+          <Route
+            path="/admin/categoria"
+            element={
+              <PrivateRoute>
+                <CategoriaAdmin />
+              </PrivateRoute>
+            }
+          />
+
+          {/* ✅ Esta ruta es para administrar PRODUCTOS (usa el mejorado) */}
+          <Route
+            path="/admin/productos"
+            element={
+              <PrivateRoute>
+                <ProductoAdmin />
               </PrivateRoute>
             }
           />

@@ -3,7 +3,7 @@ import { supabase } from '../supabaseClient';
 import { v4 as uuidv4 } from 'uuid';
 import imageCompression from 'browser-image-compression'; // Importa la librería de compresión
 
-const ImageUploader = ({ onUploadSuccess }) => {
+const ImageUploader = ({ onUploadSuccess, bucketName = 'carousel-images' }) => {
     const [uploading, setUploading] = useState(false);
     const [imageFile, setImageFile] = useState(null); // Archivo original seleccionado
     const [compressedFile, setCompressedFile] = useState(null); // Archivo después de la compresión y canvas processing
@@ -133,8 +133,8 @@ const ImageUploader = ({ onUploadSuccess }) => {
 
         try {
             const { data, error } = await supabase.storage
-                .from('carousel-images') // **NOMBRE DE TU BUCKET DE STORAGE**
-                .upload(filePath, compressedFile, { // Subimos el archivo PROCESADO
+                .from(bucketName) // Usa el bucket recibido por props
+                .upload(filePath, compressedFile, {
                     cacheControl: '3600',
                     upsert: false,
                 });
@@ -144,7 +144,7 @@ const ImageUploader = ({ onUploadSuccess }) => {
             }
 
             const { data: publicUrlData } = supabase.storage
-                .from('carousel-images')
+                .from(bucketName)
                 .getPublicUrl(filePath);
 
             if (publicUrlData.publicUrl) {

@@ -1,35 +1,36 @@
+// src/components/Header/Header.jsx
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from "../../assets/logo.png";
-import youtubeIcon from "../../assets/youtube.ico";
+import logo from '../../assets/logo.png';
+import youtubeIcon from '../../assets/youtube.ico';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  // Nuevo estado para controlar si el header debe ser visible y fijo
-  const [headerVisible, setHeaderVisible] = useState(true);
-  // Estado para la última posición del scroll
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDropdown = (jewelryType) => {
     setActiveDropdown(activeDropdown === jewelryType ? null : jewelryType);
   };
 
+  // Cerrar menú al hacer clic fuera
   useEffect(() => {
     const handleClickOutside = (event) => {
       const headerElement = document.getElementById('main-header');
       const mobileMenuElement = document.getElementById('mobile-menu-nav');
       const submenus = document.querySelectorAll('.has-submenu');
+
       if (
         menuOpen &&
-        headerElement && !headerElement.contains(event.target) &&
-        mobileMenuElement && !mobileMenuElement.contains(event.target)
+        headerElement &&
+        !headerElement.contains(event.target) &&
+        mobileMenuElement &&
+        !mobileMenuElement.contains(event.target)
       ) {
         setMenuOpen(false);
         setActiveDropdown(null);
-        return;
       }
+
       if (activeDropdown) {
         let clickedInsideSubmenu = false;
         submenus.forEach((li) => {
@@ -42,45 +43,12 @@ const Header = () => {
         }
       }
     };
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [menuOpen, activeDropdown]);
-
-  // Nuevo useEffect para manejar el scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      // Solo aplicamos esta lógica en pantallas móviles
-      if (window.innerWidth < 768) {
-        const currentScrollY = window.scrollY;
-
-        // Si el usuario se desplaza hacia abajo (ocultamos el header)
-        if (currentScrollY > lastScrollY && currentScrollY > 100) { // Ocultar si se desplaza hacia abajo y no estamos en la parte superior
-          setHeaderVisible(false);
-        } 
-        // Si el usuario se desplaza hacia arriba (mostramos el header)
-        else if (currentScrollY < lastScrollY) {
-          setHeaderVisible(true);
-        }
-        
-        // Si el usuario está en la parte superior de la página, el header siempre es visible
-        if (currentScrollY === 0) {
-            setHeaderVisible(true);
-        }
-
-        setLastScrollY(currentScrollY);
-      } else {
-        // En desktop, siempre es visible y se comporta como sticky
-        setHeaderVisible(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastScrollY]); // Dependencia: lastScrollY para detectar cambios en la posición del scroll
 
   const jewelryTypes = ['Anillos', 'Pulseras', 'Collares', 'Aretes'];
   const materialsByJewelryType = {
@@ -109,17 +77,23 @@ const Header = () => {
   return (
     <header
       id="main-header"
-      // Aplicamos las clases condicionalmente
-      className={`bg-white text-black z-50 shadow-md w-full 
-        ${headerVisible ? 'fixed top-0' : 'relative -top-16'} 
-        md:sticky md:top-0 
-        transition-all duration-300 ease-in-out`} // Animación suave
+      className="bg-white text-black z-50 shadow-md w-full md:sticky md:top-0 fixed top-0"
     >
       <div className="container mx-auto px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Link to="/" onClick={() => { setActiveDropdown(null); if (window.innerWidth < 768) setMenuOpen(false); }}>
-            <img src={logo} alt="Logo de tu marca de joyería artesanal" className="h-10 cursor-pointer" />
+          <Link
+            to="/"
+            onClick={() => {
+              setActiveDropdown(null);
+              if (window.innerWidth < 768) setMenuOpen(false);
+            }}
+          >
+            <img
+              src={logo}
+              alt="Logo de tu marca de joyería artesanal"
+              className="h-10 cursor-pointer"
+            />
           </Link>
         </div>
 
@@ -128,16 +102,16 @@ const Header = () => {
           ☰
         </button>
 
-        {/* Menú principal (Nav) */}
+        {/* Menú principal */}
         <nav
           id="mobile-menu-nav"
           className={`${
             menuOpen ? 'translate-x-0' : '-translate-x-full'
-          } fixed left-0 w-full bg-white z-40 h-[calc(100vh-64px)] overflow-y-auto // Altura completa menos el header
+          } fixed left-0 w-full bg-white z-40 h-[calc(100vh-64px)] overflow-y-auto
             transform transition-transform duration-300 ease-in-out
             md:static md:block md:w-auto md:h-auto md:overflow-visible
             md:translate-x-0 md:bg-transparent`}
-          style={{ top: '64px' }} // Asegura que el menú móvil se posicione debajo del header
+          style={{ top: '64px' }}
         >
           {menuOpen && (
             <button
@@ -150,7 +124,6 @@ const Header = () => {
           )}
 
           <ul className="flex flex-col md:flex-row md:space-x-6 md:items-center px-4 pb-4 md:pb-0 pt-4 h-full overflow-y-auto md:h-auto md:overflow-visible text-left">
-            {/* Sobre Mi */}
             <li>
               <Link
                 to="/sobremi"
@@ -164,7 +137,6 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Tipos de Joyas con submenús */}
             {jewelryTypes.map((jewelryType) => (
               <li key={jewelryType} className="group has-submenu md:relative">
                 <button
@@ -172,7 +144,6 @@ const Header = () => {
                   onClick={() => toggleDropdown(jewelryType)}
                 >
                   {jewelryType}
-                  {/* Símbolo > o v solo en móvil */}
                   <span className="ml-2 md:hidden">
                     {activeDropdown === jewelryType ? 'v' : '>'}
                   </span>
@@ -202,7 +173,6 @@ const Header = () => {
               </li>
             ))}
 
-            {/* Personalizados */}
             <li>
               <Link
                 to="/personalizado"
@@ -216,7 +186,6 @@ const Header = () => {
               </Link>
             </li>
 
-            {/* Videos Shorts */}
             <li>
               <Link
                 to="/videoshorts"
@@ -229,14 +198,12 @@ const Header = () => {
                 <img
                   src={youtubeIcon}
                   alt="YouTube"
-                  className="w-5 h-5"
-                  style={{ display: 'inline-block' }}
+                  className="w-5 h-5 inline-block mr-1"
                 />
                 Videos Shorts
               </Link>
             </li>
 
-            {/* Contacto */}
             <li>
               <Link
                 to="/contacto"

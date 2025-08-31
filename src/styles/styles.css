@@ -1,39 +1,37 @@
-/* src/styles.css */
-
 /* Estilos Globales */
-html, body { /* <-- Asegura estas propiedades para ambos */
+html, body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  /* IMPORTANTE: Asegura que el body pueda scrollar libremente */
-  height: 100%; /* O min-height: 100vh; */
-  min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la pantalla */
-  overflow-x: hidden; /* Oculta scroll horizontal si no es necesario */
-  /* NO USAR: overflow: hidden; en body o html a menos que sepas exactamente por qué. */
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* 
+    ✅ No uses overflow-y: hidden ni overscroll-behavior
+    Permitimos el scroll natural del navegador
+  */
 }
 
-body {
-  -ms-overflow-style: none; /* Para Internet Explorer y Edge */
-  scrollbar-width: none; /* Para Firefox */
-  /* ELIMINAR O COMENTAR ESTAS LÍNEAS. Son las más probables causas del problema */
-  /* overscroll-behavior-y: contain; */
-  /* touch-action: pan-y; */
-  text-size-adjust: 100%; /* Mantener esto si es necesario para el tamaño de texto */
-}
+/* 
+  ✅ Eliminado:
+  - scrollbar-width: none
+  - -ms-overflow-style: none
+  - body::-webkit-scrollbar { display: none }
+  Motivo: Ocultan el scroll pero no eliminan el desplazamiento, y pueden romper window.scrollTo()
+*/
 
-/* Ocultar la barra de scroll en navegadores WebKit (Chrome, Safari) */
-body::-webkit-scrollbar {
-  display: none;
+/* Añadimos scroll-behavior suave en todo el sitio */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Reglas para el contenedor principal de la aplicación (usualmente #root) */
 #root {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0rem;
+  padding: 0;
   text-align: center;
-  /* No le des altura fija a #root si quieres que el body haga el scroll principal */
+  /* No le des altura fija a #root si quieres que el body maneje el scroll */
 }
 
 /* Estilos del Logo */
@@ -83,4 +81,44 @@ body::-webkit-scrollbar {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+/* Personalización de puntos de react-slick */
+.slick-dots-custom {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.slick-dots-custom li {
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.slick-dots-custom li.slick-active {
+  opacity: 1 !important;
+}
+
+.slick-dots-custom li button {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background-color: #1f2937 !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.slick-dots-custom li button:before {
+  content: none !important; /* Elimina el contenido por defecto */
 }
